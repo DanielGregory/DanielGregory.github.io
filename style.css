@@ -11,23 +11,26 @@ body {
   width: 100%;
   background-position: center;
   background-size: cover;
-  position: static;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center content horizontally */
 }
 
 .topnav {
   font-size: 20px;
   display: flex;
-  padding: 1% 3%;
   justify-content: space-between;
+  padding: 1% 3%;
   text-align: center;
 }
 
-.topnav ul li {
+.topnav ul {
   list-style: none;
-  display: inline-block;
-  position: relative;
+  display: flex;
+}
+
+.topnav ul li {
   padding: 15px 15px;
 }
 
@@ -52,8 +55,10 @@ body {
 
 .title {
   text-shadow: 4px 4px 4px #000;
-  font-size: 20px;
-  padding: 2px;
+  font-size: 40px; /* Larger font for the title */
+  color: #fff;
+  text-align: center; /* Center text */
+  padding: 20px 0;
 }
 
 .about, .projects {
@@ -61,17 +66,17 @@ body {
   margin: auto;
   text-align: left;
   padding-top: 5px;
-  color: #000; /* Change text color to black */
+  color: #000; /* Black text color for content sections */
 }
 
 h3 {
   font-size: 25px;
-  color: #000; /* Change header color to black */
+  color: #000; /* Ensure all h3 headers are black */
 }
 
 p {
   font-size: 20px;
-  color: #000; /* Change paragraph color to black */
+  color: #000; /* Ensure paragraphs are black */
 }
 
 nav .fa {
