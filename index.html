@@ -1,39 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Gregory's Portfolio</title>
+  <title>Daniel Gregory Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hello! My name is Daniel Gregory, and this is where I showcase my projects.</p>
+  <!-- Navigation -->
+  <section class="header">
+    <nav>
+      <div class="topnav" id="topnavLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#cpp-projects">C++ Projects</a></li>
+          <li><a href="#ai-projects">AI/ML Projects</a></li>
+          <li><a href="#matlab-projects">MATLAB Projects</a></li>
+          <li><a href="#excel-projects">Excel Projects</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
 
-   <!-- C++ Projects Section -->
-    <h2>C++ Projects</h2>
-    <ul>
-        <li><a href="https://github.com/DanielGregory/cpp-project-1">C++ Project 1</a></li>
-        <!-- Add more C++ projects here -->
-    </ul>
+    <!-- Title -->
+    <div class="title">
+      <center>
+        <h1>Daniel Gregory's Portfolio</h1>
+        <h3><em>Showcasing C++, AI/ML, MATLAB, and Excel Projects</em></h3>
+      </center>
+    </div>
+  </section>
 
-    <!-- Machine Learning/AI Projects Section -->
-    <h2>Machine Learning/AI Projects</h2>
+  <!-- C++ Projects Section -->
+  <a id="cpp-projects"></a>
+  <div class="projects">
+    <h3>C++ Projects</h3>
     <ul>
-        <li><a href="https://github.com/DanielGregory/ai-project-1">AI Project 1</a></li>
-        <!-- Add more AI/ML projects here -->
+      <li><a href="https://github.com/DanielGregory/cpp-project-1">C++ Project 1</a></li>
+      <li><a href="https://github.com/DanielGregory/cpp-project-2">C++ Project 2</a></li>
     </ul>
+  </div>
 
-    <!-- MATLAB Projects Section -->
-    <h2>MATLAB Projects</h2>
+  <!-- AI/ML Projects Section -->
+  <a id="ai-projects"></a>
+  <div class="projects">
+    <h3>AI/ML Projects</h3>
     <ul>
-    <h2>Excel Projects</h2>
-    <ul>
-        <li><a href="https://link-to-your-excel-file">Excel Project 1</a></li>
+      <li><a href="https://github.com/DanielGregory/ai-project-1">AI Project 1</a></li>
+      <li><a href="https://github.com/DanielGregory/ai-project-2">AI Project 2</a></li>
     </ul>
+  </div>
 
-    <h2>Coding Projects</h2>
+  <!-- MATLAB Projects Section -->
+  <a id="matlab-projects"></a>
+  <div class="projects">
+    <h3>MATLAB Projects</h3>
     <ul>
-        <li><a href="https://github.com/DanielGregory/your-coding-project">Coding Project 1</a></li>
+      <li><a href="https://github.com/DanielGregory/matlab-project-1">MATLAB Project 1</a></li>
     </ul>
+  </div>
+
+  <!-- Excel Projects Section -->
+  <a id="excel-projects"></a>
+  <div class="projects">
+    <h3>Excel Projects</h3>
+    <ul>
+      <li><a href="https://link-to-your-excel-file">Excel Project 1</a></li>
+    </ul>
+  </div>
+
+  <!-- About Section -->
+  <a id="about"></a>
+  <div class="about">
+    <h3>About</h3>
+    <p>This portfolio showcases various projects in C++, AI/ML, MATLAB, and Excel that I have worked on. Feel free to explore!</p>
+
+    <!-- Contact Section -->
+    <h3>Contact</h3>
+    <p>Made by Daniel Gregory<br>
+    Contact: dannytgregory@aol.com</p>
+  </div>
+
+  <!-- JavaScript for the Toggle Menu -->
+  <script>
+    var topnavLinks = document.getElementById("topnavLinks");
+    function showMenu() {
+      topnavLinks.style.left = "0";
+    }
+    function hideMenu() {
+      topnavLinks.style.left = "-250px";
+    }
+  </script>
 </body>
 </html>
