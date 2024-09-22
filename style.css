@@ -5,8 +5,8 @@ body {
 }
 
 .header {
-  background-image: linear-gradient(rgba(181,208,187,0.7), rgba(4,30,30,0.7)), 
-  url("https://wallpaperaccess.com/full/1447020.jpg");
+  background-image: linear-gradient(rgba(181, 208, 187, 0.7), rgba(4, 30, 30, 0.7)),
+    url("https://wallpaperaccess.com/full/1447020.jpg");
   min-height: 75vh;
   width: 100%;
   background-position: center;
@@ -52,8 +52,9 @@ body {
 
 .title {
   text-shadow: 4px 4px 4px #000;
-  font-size: 20px;
-  padding: 2px;
+  font-size: 36px; /* Increased for prominence */
+  padding: 20px;
+  text-align: center;
 }
 
 .projects {
@@ -64,7 +65,7 @@ body {
 }
 
 .projects h3 {
-  font-size: 24px;
+  font-size: 28px; /* Larger font for project headings */
   margin-bottom: 10px;
 }
 
@@ -86,21 +87,20 @@ body {
   width: 80%;
   margin: auto;
   text-align: left;
-  padding-top: 5px;
+  padding: 20px 0;
   color: #000;
-  text-shadow: none;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px; /* Adjusted for better readability */
 }
 
 nav .fa {
   display: none;
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
   .title {
     font-size: 20px;
   }
