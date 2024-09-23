@@ -5,8 +5,7 @@ body {
 }
 
 .header {
-  background-image: linear-gradient(rgba(0, 0, 50, 0.7), rgba(0, 0, 100, 0.7)),
-    url("https://www.google.com/imgres?q=tech%20background%20free&imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-vector%2Fbackground-realistic-abstract-technology-particle_23-2148431735.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Ftechnology-background&docid=U6VMttfIazui4M&tbnid=cZottIUBd0SvaM&vet=12ahUKEwjZi6GQ99eIAxUhMdAFHUNJOLAQM3oECGkQAA..i&w=626&h=417&hcb=2&ved=2ahUKEwjZi6GQ99eIAxUhMdAFHUNJOLAQM3oECGkQAA");
+  background-image:url("https://www.google.com/imgres?q=tech%20background%20free&imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-vector%2Fbackground-realistic-abstract-technology-particle_23-2148431735.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Ftechnology-background&docid=U6VMttfIazui4M&tbnid=cZottIUBd0SvaM&vet=12ahUKEwjZi6GQ99eIAxUhMdAFHUNJOLAQM3oECGkQAA..i&w=626&h=417&hcb=2&ved=2ahUKEwjZi6GQ99eIAxUhMdAFHUNJOLAQM3oECGkQAA");
   min-height: 75vh;
   width: 100%;
   background-position: center;
