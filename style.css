@@ -103,6 +103,18 @@ nav .fa {
   display: none;
 }
 
+.projects ul li a {
+  color: #ffffff; /* Default link color */
+  text-decoration: underline;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.projects ul li a:hover {
+  color: #ffd700; /* Change to a gold color on hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background for hover effect */
+  padding: 5px; /* Add some padding to enhance the hover effect */
+}
+
 @media (max-width: 700px) {
   .title {
     font-size: 20px;
