@@ -62,7 +62,7 @@ body {
   width: 80%;
   margin: auto;
   padding: 20px 0;
-  color: #000; /* Set project text color to black */
+  color: blue; /* Set project text color to black */
 }
 
 .projects h3 {
