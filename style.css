@@ -1,6 +1,6 @@
 /* Reset styles for links */
 a {
-  color: blue; /* Set default link color */
+  color: #000; /* Set default link color */
   text-decoration: none; /* Remove underline if desired */
 }
 body {
