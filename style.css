@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  color: #000; /* Changed to black for text */
+  color: #000; /* Default text color */
   font-family: Goudy Old Style;
 }
 
@@ -53,7 +53,7 @@ body {
   width: 100%;
 }
 
-.title {
+.title h1 {
   text-shadow: 4px 4px 4px #000; /* Keep the shadow for contrast */
   color: #ffffff; /* Set title color to white */
   font-size: 36px; /* Increased for prominence */
