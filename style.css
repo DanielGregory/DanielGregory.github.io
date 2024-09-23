@@ -62,7 +62,7 @@ body {
   width: 80%;
   margin: auto;
   padding: 20px 0;
-  color: blue;
+  color: #000000;
 }
 
 .projects h3 {
@@ -81,8 +81,8 @@ body {
 }
 
 .projects ul li a {
-  color: #000000; 
-  text-decoration: underline;
+  color: blue; /* Set link color to blue */
+  text-decoration: underline; /* Keep the underline */
   transition: color 0.3s, background-color 0.3s;
 }
 
