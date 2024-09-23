@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  color: #000; /* Default text color */
+  color: #ffffff;
   font-family: Goudy Old Style;
 }
 
@@ -19,23 +19,20 @@ body {
 .topnav {
   font-size: 20px;
   display: flex;
-  justify-content: center; /* Center navigation items */
   padding: 1% 3%;
-}
-
-.topnav ul {
-  display: flex;
-  justify-content: center; /* Center list items */
-  padding: 0; /* Reset padding */
+  justify-content: center; /* Center the top navigation */
+  text-align: center;
 }
 
 .topnav ul li {
   list-style: none;
-  padding: 15px;
+  display: inline-block;
+  position: relative;
+  padding: 15px 15px;
 }
 
 .topnav ul li a {
-  color: #fff; /* Keep navigation links white */
+  color: #fff;
   text-decoration: none;
 }
 
@@ -53,7 +50,8 @@ body {
   width: 100%;
 }
 
-.title h1 {
+.title {
+  text-shadow: 4px 4px 4px #000;
   color: #ffffff; /* Set title color to white */
   font-size: 36px; /* Increased for prominence */
   padding: 20px;
@@ -64,7 +62,7 @@ body {
   width: 80%;
   margin: auto;
   padding: 20px 0;
-  color: #000; /* Ensure project text is black */
+  color: #ffffff;
 }
 
 .projects h3 {
@@ -82,28 +80,6 @@ body {
 }
 
 .projects ul li a {
-  color: #000; /* Black for project links */
-  text-decoration: underline;
-}
-
-.about {
-  width: 80%;
-  margin: auto;
-  text-align: left;
-  padding: 20px 0;
-  color: #000; /* Ensure about section text is black */
-  font-size: 20px;
-}
-
-p {
-  font-size: 18px; /* Adjusted for better readability */
-}
-
-nav .fa {
-  display: none;
-}
-
-.projects ul li a {
   color: #ffffff; /* Default link color */
   text-decoration: underline;
   transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
@@ -115,9 +91,29 @@ nav .fa {
   padding: 5px; /* Add some padding to enhance the hover effect */
 }
 
+.about {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  padding: 20px 0;
+  color: #000;
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px; /* Adjusted for better readability */
+}
+
+nav .fa {
+  display: none;
+}
+
 @media (max-width: 700px) {
   .title {
     font-size: 20px;
+  }
+  .topnav ul li {
+    display: block;
   }
   .topnav {
     position: absolute;
@@ -139,6 +135,5 @@ nav .fa {
   }
   .topnav ul {
     padding: 25px;
-    flex-direction: column; /* Stack links vertically */
   }
 }
