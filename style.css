@@ -1,8 +1,3 @@
-/* Reset styles for links */
-a {
-  color: #000; /* Set default link color */
-  text-decoration: none; /* Remove underline if desired */
-}
 body {
   margin: 0;
   color: #000000; /* Set default text color to black */
