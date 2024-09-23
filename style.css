@@ -54,11 +54,11 @@ body {
 }
 
 .title {
-  text-shadow: 4px 4px 4px #000;
+  text-shadow: 4px 4px 4px #000; /* Keep the shadow for contrast */
+  color: #ffffff; /* Set title color to white */
   font-size: 36px; /* Increased for prominence */
   padding: 20px;
   text-align: center;
-  color: #ffffff;
 }
 
 .projects {
