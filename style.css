@@ -5,7 +5,8 @@ body {
 }
 
 .header {
-  background-image:url("https://cdn.pixabay.com/photo/2024/05/23/09/12/ai-generated-8782744_1280.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://cdn.pixabay.com/photo/2024/05/23/09/12/ai-generated-8782744_1280.jpg");
   min-height: 75vh;
   width: 100%;
   background-position: center;
