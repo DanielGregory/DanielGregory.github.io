@@ -80,7 +80,7 @@ body {
 }
 
 .projects ul li a {
-  color: #000; /* Default link color */
+  color: blue; 
   text-decoration: underline;
   transition: color 0.3s, background-color 0.3s;
 }
