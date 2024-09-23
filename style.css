@@ -1,5 +1,5 @@
 .projects ul li a {
-  color: blue; 
+  color: #000; 
   text-decoration: underline;
   transition: color 0.3s, background-color 0.3s;
 }
