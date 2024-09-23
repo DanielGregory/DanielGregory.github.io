@@ -107,6 +107,7 @@ p {
 
 nav .fa {
   display: none;
+  color: #fff;
 }
 
 @media (max-width: 700px) {
