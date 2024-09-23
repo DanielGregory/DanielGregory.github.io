@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  color: #000000; /* Changed text color to black */
+  color: #000000; /* Changed the text color to black */
   font-family: Goudy Old Style;
 }
 
@@ -19,14 +19,14 @@ body {
 .topnav {
   font-size: 20px;
   display: flex;
-  padding: 1% 3%;
-  justify-content: center; /* Center the navigation */
+  justify-content: center; /* Centering the entire nav menu */
+  padding: 1% 0;
   text-align: center;
 }
 
 .topnav ul {
   display: flex;
-  justify-content: center; /* Center the navigation */
+  justify-content: center; /* Centering the navigation links */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -34,13 +34,11 @@ body {
 
 .topnav ul li {
   list-style: none;
-  display: inline-block;
-  position: relative;
   padding: 15px 15px;
 }
 
 .topnav ul li a {
-  color: #fff; /* Keep top navigation links white */
+  color: #ffffff; /* Top navigation links stay white */
   text-decoration: none;
 }
 
@@ -69,13 +67,13 @@ body {
   width: 80%;
   margin: auto;
   padding: 20px 0;
-  color: #ffffff;
+  color: #000000; /* Changed project section text to black */
 }
 
 .projects h3 {
   font-size: 28px; /* Larger font for project headings */
   margin-bottom: 10px;
-  color: #000; /* Changed project section headings to black */
+  color: #000000; /* Project section headings are black */
 }
 
 .projects ul {
@@ -97,7 +95,7 @@ body {
   margin: auto;
   text-align: left;
   padding: 20px 0;
-  color: #000;
+  color: #000000; /* Set about section text to black */
   font-size: 20px;
 }
 
