@@ -46,18 +46,24 @@
   <h3>Machine Learning Projects</h3>
   <ul>
     <li>
-      <a href="https://github.com/DanielGregory/Excel/raw/main/AI-Example.xlsx">Ai-Results</a>
+      <a href="https://github.com/DanielGregory/Excel/raw/main/Model_50_3-27-25_para.xlsx">SGD-Results</a>
+      <a href="https://github.com/DanielGregory/Excel/raw/main/S&P500_RNN_3-27-25_500.xlsx">RNN-Results</a>
+      <a href="https://github.com/DanielGregory/Excel/raw/main/AI-Example.xlsx">RL-Results</a>
+
+
       </a>
       <p>
-        AI-Driven Swing Trading Model<br>
-        Developed a machine learning model to predict 1-day price movements for any stock.  Currently achieving consistent profits on many stocks, while stocks being predicted at less than a 50% rate have their predictions flipped, i.e. a stock being predicted at a 38% rate becomes a stock predicted at a 62% rate. <br><br>
-        Key Features:<br>
-        - Daily runs on S&P 500, predicting if a stocks price will increase or decrease.<br>
-        - Uses data driven techniques and online learning to adapt and improve upon itself over time.<br>
-        - Utilizes an SGDClassifier, which assigns weights to each varaible and updates them dynamically as new data is processed.<br><br>
+        AI-Driven Swing Trading Models<br>
+        Developed machine learning models to predict 1-day price movements for any stock.  Currently achieving consistent profits on many stocks, while stocks being predicted at less than a 50% rate have their predictions flipped, i.e. a stock being predicted at a 38% rate becomes a stock predicted at a 62% rate. <br><br>
+        Current Models:<br>
+        - SGDClassifier based Model<br>
+        - Recurrent Nerual Network Based Model<br>
+        - Reinforcement Learning Based Model<br><br>
         Overall Performance:<br>
-        - Averages about a 55-56% accuracy across entire S&P500<br>
-        - For stocks with a 60%+ accuracy rating (typically 90-100 stocks), investing $5,000 daily yields an average profit of $200 over a 50-day period. Many of these stocks generate a daily return of approximately 0.8% to 1%.<br>
+        - All three models (SGD, RNN, and RL) are currently undergoing simultaneous live testing and backtesting across the S&P 500.0<br>
+        - SGD Model: Consistent with previous testing, this model maintains an average directional accuracy of 55-56% across the S&P 500. For stocks predicted with 60%+ accuracy, a $5,000 daily investment has yielded an average profit of approximately $200 over a 50-day period, with many positions demonstrating daily returns of 0.8-1%.<br>
+        - RNN Model: Accuracy of this model in testing is similar to the SGD model at around 55-56% but profits have been much higher. In actual real-world applications, this model is currently averaging approximately a 0.875% daily return.<br>
+        - RL Model: This model employs a unique approach, learning to trade based on a defined reward system. Preliminary results demonstrate the agent's ability to adapt to market fluctuations and achieve profitable trades.  Early testing shows that the RL model is producing positive returns.<br>
       </p>
     </li>
     <li>
@@ -65,7 +71,7 @@
       Stock Market AI(Google Colab - Outdated Version)
     </a>
     <p>
-      *Note: This version of the model is outdated and is provided for reference. The current model has undergone significant improvements and updates.
+      *Note: This version of the model is outdated and is provided for reference. The current models have undergone significant improvements and updates.
     </li>
   </ul>
 </div>
