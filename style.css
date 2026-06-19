@@ -1,6 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  color: #000000; /* Set default text color to black */
+  color: #000000;
   font-family: Goudy Old Style;
 }
 
@@ -34,6 +38,11 @@ body {
 .topnav ul li a {
   color: #fff;
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+.topnav ul li a.active {
+  color: #ffd700;
 }
 
 .topnav ul li::after {
@@ -63,6 +72,11 @@ body {
   margin: auto;
   padding: 20px 0;
   color: #000000;
+  border-top: 1px solid #e0e0e0;
+}
+
+.projects:first-of-type {
+  border-top: none;
 }
 
 .projects h3 {
@@ -81,8 +95,8 @@ body {
 }
 
 .projects ul li a {
-  color: blue; /* Set link color to blue */
-  text-decoration: underline; /* Keep the underline */
+  color: blue;
+  text-decoration: underline;
   transition: color 0.3s, background-color 0.3s;
 }
 
@@ -96,9 +110,19 @@ body {
   width: 80%;
   margin: auto;
   text-align: left;
-  padding: 20px 0;
+  padding: 20px 0 40px;
   color: #000;
   font-size: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.about a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.about a:hover {
+  color: #ffd700;
 }
 
 p {
@@ -107,6 +131,28 @@ p {
 
 nav .fa {
   display: none;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #143434;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.back-to-top:hover {
+  opacity: 1;
 }
 
 @media (max-width: 700px) {
