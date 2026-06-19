@@ -106,6 +106,30 @@ body {
   padding: 5px;
 }
 
+.section-divider {
+  width: 100%;
+  background: #143434;
+  color: #fff;
+  padding: 32px 0;
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+.section-divider h2 {
+  font-size: 30px;
+  margin: 0 0 10px;
+  font-family: Goudy Old Style;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.section-divider p {
+  font-size: 17px;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .about {
   width: 80%;
   margin: auto;
