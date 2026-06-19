@@ -2,351 +2,495 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Daniel Gregory's Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Daniel Gregory, data analyst with projects in machine learning, full-stack web apps, data science, cloud infrastructure, and more.">
-  <meta property="og:title" content="Daniel Gregory's Portfolio">
-  <meta property="og:description" content="Data analyst with projects spanning ML, TypeScript web apps, AWS cloud, data science, C++, and more.">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Daniel Gregory, ML engineer and applied finance developer. Built and shipped ML trading models, full-stack web apps, and production ML systems.">
+  <meta property="og:title" content="Daniel Gregory">
+  <meta property="og:description" content="ML engineer with applied finance focus. Trading models, full-stack apps, production ML systems.">
+  <title>Daniel Gregory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-  <section class="header">
-    <nav>
-      <div class="topnav" id="topnavLinks">
-        <i class="fa fa-times" onclick="hideMenu()"></i>
-        <ul>
-          <li><a href="#ml-projects" onclick="hideMenu()">Machine Learning</a></li>
-          <li><a href="#webapp-projects" onclick="hideMenu()">Web Apps</a></li>
-          <li><a href="#data-science-projects" onclick="hideMenu()">Data Science</a></li>
-          <li><a href="#academic" onclick="hideMenu()">Academic &amp; Research</a></li>
-          <li><a href="#about" onclick="hideMenu()">About</a></li>
-        </ul>
-      </div>
-      <i class="fa fa-bars" onclick="showMenu()"></i>
-    </nav>
-    <div class="title">
-      <h1>Daniel Gregory</h1>
-      <p class="hero-sub">Data Analyst</p>
+
+  <!-- NAV -->
+  <header id="site-nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#hero">DG</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#apps" class="nav-link">Apps</a>
+        <a href="#more" class="nav-link">More</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="mailto:dannytgregory@aol.com" class="nav-cta">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <div id="ml-projects" class="projects">
-    <h3>Machine Learning Projects</h3>
-    <ul>
-      <li>
-        <a href="https://github.com/DanielGregory/Excel/raw/main/Model_50_3-27-25_para.xlsx">SGD-Results</a>
-        <a href="https://github.com/DanielGregory/Excel/raw/main/S&P500_RNN_3-27-25_500.xlsx">RNN-Results</a>
-        <a href="https://github.com/DanielGregory/Excel/raw/main/AI-Example.xlsx">RL-Results</a>
-      </li>
-      <li>
-        <a href="https://github.com/DanielGregory/Stock-Market-AI" target="_blank">AI-Driven Swing Trading Models</a>
-      </li>
-    </ul>
-    <p>
-      Developed machine learning models to predict 1-week price movements for individual stocks. Currently, the RNN-based model is the primary model in use and has consistently outperformed the broader market, generating profitable trades without relying on weekly swing strategies.<br><br>
-      Current Models:<br>
-      - SGDClassifier Based Model<br>
-      - Recurrent Neural Network (RNN) Based Model<br>
-      - Reinforcement Learning (RL) Based Model<br><br>
-      Overall Performance:<br>
-      - RNN Model: Since June, the model has achieved an overall portfolio increase of ~15%, consistently generating profitable weekly trades.<br>
-      - SGD and RL Models: Still under evaluation and provide additional insights for strategy refinement.
-    </p>
-    <ul>
-      <li>
-        <a href="https://colab.research.google.com/drive/1Q15vtjbcG_I_Vy9XsZuA4qYmTbe-_fZN?usp=sharing">Stock Market AI (Google Colab – Outdated Version)</a>
-      </li>
-    </ul>
-    <p>*Note: This version of the model is outdated and is provided for reference. The current models have undergone significant improvements and updates.</p>
-  </div>
+  <main>
 
-  <div id="webapp-projects" class="projects">
-    <h3>Web App Projects</h3>
-    <ul>
-      <li>
-        <a href="https://meal-prep-snowy-nu.vercel.app/plan" target="_blank">Meal Prep App (Live Demo)</a>
-        <a href="https://github.com/DanielGregory/Meal_Prep" target="_blank">(GitHub)</a>
-      </li>
-    </ul>
-    <p>
-      A full-stack meal planning application built with TypeScript. Generates weekly meal plans and shopping lists to streamline meal preparation. Users can browse recipes, build custom plans, and organize grocery shopping efficiently.
-    </p>
-    <ul>
-      <li>
-        <a href="https://movie-tracker-lyart-two.vercel.app/discover" target="_blank">Movie Tracker / Recommender (Live Demo)</a>
-        <a href="https://github.com/DanielGregory/Movie_Tracker" target="_blank">(GitHub)</a>
-      </li>
-    </ul>
-    <p>
-      A JavaScript movie tracking and recommendation application. Users can discover, search, save, and manage films with personalized recommendations and a clean discovery interface.
-    </p>
-    <ul>
-      <li>
-        <a href="https://portfolio-analyzer-ten-phi.vercel.app/#" target="_blank">Portfolio Analyzer (Live Demo)</a>
-        <a href="https://github.com/DanielGregory/Portfolio_analyzer" target="_blank">(GitHub)</a>
-      </li>
-    </ul>
-    <p>
-      A web-based financial portfolio analysis tool providing performance metrics, asset allocation breakdowns, and insights to support informed investment decisions.
-    </p>
-    <ul>
-      <li>
-        <a href="https://financial-advisor-gules.vercel.app/investments" target="_blank">Financial Advisor (Live Demo)</a>
-        <a href="https://github.com/DanielGregory/Financial_Advisor" target="_blank">(GitHub)</a>
-      </li>
-    </ul>
-    <p>
-      A TypeScript application providing personalized investment guidance and financial planning tools. Tracks performance, offers portfolio recommendations, and helps users manage their financial goals.
-    </p>
-    <ul>
-      <li>
-        <a href="https://options-trading-six.vercel.app/#" target="_blank">Options Trader (Live Demo)</a>
-        <a href="https://github.com/DanielGregory/Options_Trading" target="_blank">(GitHub)</a>
-      </li>
-    </ul>
-    <p>
-      A JavaScript web application for analyzing and tracking options trading strategies. Provides tools for evaluating options chains, tracking positions, and identifying market opportunities.
-    </p>
-  </div>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-dot-grid" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">ML Engineer / Applied Finance</p>
+        <h1 class="hero-name">Daniel Gregory</h1>
+        <p class="hero-body">I build ML systems that ship and perform. From trading models running live on production data to full-stack apps deployed at scale, I work at the intersection of machine learning, quantitative finance, and engineering.</p>
+        <div class="hero-ctas">
+          <a href="https://github.com/DanielGregory" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
+          <a href="mailto:dannytgregory@aol.com" class="btn btn-outline">dannytgregory@aol.com</a>
+        </div>
+        <dl class="hero-stats">
+          <div class="stat">
+            <dt>Portfolio Return</dt>
+            <dd>~15%</dd>
+          </div>
+          <div class="stat">
+            <dt>Deployed Apps</dt>
+            <dd>5</dd>
+          </div>
+          <div class="stat">
+            <dt>Degree</dt>
+            <dd>MS CS</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
 
-  <div id="data-science-projects" class="projects">
-    <h3>Data Science Projects</h3>
-    <ul>
-      <li>
-        <a href="https://github.com/DanielGregory/RestaurantRecommender" target="_blank">Restaurant Recommender</a>
-        <a href="https://youtu.be/OBftYsLB1Rs" target="_blank">(Video Demo)</a>
-      </li>
-    </ul>
-    <p>
-      This capstone project is a full-stack, web-based application designed to help users discover new dining options by providing tailored, data-driven recommendations from millions of Yelp reviews.<br><br>
-      It features:<br>
-      - A custom weighted scoring model based on Natural Language Processing (NLP) of review text.<br>
-      - A user-friendly interface with interactive List and Map views.<br>
-      - A scalable, production-ready architecture deployed on AWS EC2.<br><br>
-      The core technologies and methodologies include:<br>
-      - Full-stack development: Utilizing Python and the Flask framework for a robust web application.<br>
-      - Machine learning: Applying NLP to analyze and quantify sentiment from a massive dataset of customer reviews.<br>
-      - Cloud deployment: Configuring a production environment with Gunicorn and Nginx on an AWS EC2 instance.<br><br>
-      The system simplifies decision-making for dining choices by offering a tailored, user-driven experience.
-    </p>
-  </div>
+    <!-- FEATURED WORK -->
+    <section id="work" class="section">
+      <div class="section-inner">
+        <p class="section-label">Featured Work</p>
+        <p class="section-sub">End-to-end ML systems, from research to production.</p>
 
-  <div id="academic" class="section-divider">
-    <h2>Academic &amp; Research Projects</h2>
-    <p>Projects from university coursework, labs, and independent research, spanning systems programming, cloud infrastructure, robotics, numerical analysis, and data visualization.</p>
-  </div>
+        <!-- Case Study 01 -->
+        <article class="case-study fade-in">
+          <div class="case-num">01</div>
+          <div class="case-body">
+            <h2 class="case-title">AI Swing Trading Models</h2>
+            <div class="case-img-wrap">
+              <div class="img-frame ratio-16-9" role="img" aria-label="Equity curve performance chart">
+                <span class="img-label">Equity curve vs. benchmark</span>
+                <img src="/images/projects/ai-trading/chart-performance.png" alt="Equity curve showing AI trading model performance vs S&P 500 benchmark" loading="lazy" onerror="this.style.opacity='0'">
+              </div>
+              <div class="img-frame ratio-16-9" role="img" aria-label="Model comparison chart">
+                <span class="img-label">SGD vs RNN vs RL comparison</span>
+                <img src="/images/projects/ai-trading/model-comparison.png" alt="Side-by-side comparison of SGD, RNN, and RL trading model results" loading="lazy" onerror="this.style.opacity='0'">
+              </div>
+            </div>
+            <div class="case-grid">
+              <div class="case-block">
+                <h3>Problem</h3>
+                <p>Identifying consistent alpha on 1-week equity moves without overfitting to historical data or relying on hand-coded swing rules.</p>
+              </div>
+              <div class="case-block">
+                <h3>Approach</h3>
+                <p>Trained three models in parallel: SGDClassifier as baseline, an RNN to capture sequential price dynamics, and a reinforcement learning agent for policy-based decisions. The RNN outperformed and became the production model running weekly on live data.</p>
+              </div>
+              <div class="case-block">
+                <h3>Stack</h3>
+                <ul class="tag-list">
+                  <li>Python</li>
+                  <li>scikit-learn</li>
+                  <li>TensorFlow</li>
+                  <li>pandas</li>
+                  <li>NumPy</li>
+                  <li>S&amp;P 500 data</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h3>Result</h3>
+                <p>~15% portfolio return since June. The model runs weekly on live data and directly led to my current role in applied finance.</p>
+              </div>
+            </div>
+            <div class="case-links">
+              <a href="https://github.com/DanielGregory/Stock-Market-AI" target="_blank" rel="noopener" class="btn-outline-sm">GitHub Repo</a>
+              <a href="https://github.com/DanielGregory/Excel/raw/main/Model_50_3-27-25_para.xlsx" class="btn-ghost-sm">SGD Results</a>
+              <a href="https://github.com/DanielGregory/Excel/raw/main/S%26P500_RNN_3-27-25_500.xlsx" class="btn-ghost-sm">RNN Results</a>
+              <a href="https://github.com/DanielGregory/Excel/raw/main/AI-Example.xlsx" class="btn-ghost-sm">RL Results</a>
+            </div>
+          </div>
+        </article>
 
-  <div id="matlab-projects" class="projects">
-    <h3>MATLAB / Numerical Research</h3>
-    <ul>
-      <li><a href="https://github.com/DanielGregory/Matlab-Research/blob/main/Research.m" target="_blank">Numerical Method for Singularly Perturbed Convection-Diffusion Problems</a></li>
-    </ul>
-    <p>
-      University research implementing a finite difference method in MATLAB to solve singularly perturbed 1D convection-diffusion problems: <em>-&epsilon;u&Prime; + u&prime; = f</em> with Dirichlet boundary conditions.<br><br>
-      These equations are notoriously difficult to solve numerically. Standard methods fail when &epsilon; is very small (here &epsilon; = 10<sup>-6</sup>) because the solution develops a sharp boundary layer that standard uniform grids cannot resolve accurately.<br><br>
-      The implementation:<br>
-      - Tests mesh sizes from 32 to 8,192 interior points on both uniform and Shishkin (layer-adapted) grids.<br>
-      - Constructs stiffness and convection matrices for the discretized system and solves them via direct linear algebra.<br>
-      - Derives and evaluates an exact analytical solution to verify accuracy.<br>
-      - Measures maximum-norm error and computes convergence rates across successive refinements.<br>
-      - Plots numerical vs. exact solutions to visualize boundary-layer resolution.<br><br>
-      This project highlights the intersection of applied mathematics, numerical analysis, and scientific computing.
-    </p>
-  </div>
+        <!-- Case Study 02 -->
+        <article class="case-study fade-in">
+          <div class="case-num">02</div>
+          <div class="case-body">
+            <h2 class="case-title">Restaurant Recommender</h2>
+            <div class="case-img-wrap single">
+              <div class="img-frame ratio-16-9" role="img" aria-label="Restaurant recommender app screenshot">
+                <span class="img-label">App UI with list and map views</span>
+                <img src="/images/projects/restaurant-reco/app-screenshot.png" alt="Restaurant recommender app showing list view and interactive map with recommendations" loading="lazy" onerror="this.style.opacity='0'">
+              </div>
+            </div>
+            <div class="case-grid">
+              <div class="case-block">
+                <h3>Problem</h3>
+                <p>Restaurant apps surface popularity, not fit. Generic results driven by review volume rather than content match leave users with mediocre suggestions.</p>
+              </div>
+              <div class="case-block">
+                <h3>Approach</h3>
+                <p>NLP sentiment analysis on millions of Yelp reviews. Built a custom weighted scoring model and a Flask web app with both List and Map views. Deployed on AWS EC2 with Gunicorn and Nginx for production traffic.</p>
+              </div>
+              <div class="case-block">
+                <h3>Stack</h3>
+                <ul class="tag-list">
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>NLP</li>
+                  <li>scikit-learn</li>
+                  <li>AWS EC2</li>
+                  <li>Gunicorn</li>
+                  <li>Nginx</li>
+                </ul>
+              </div>
+              <div class="case-block">
+                <h3>Result</h3>
+                <p>Production-deployed full-stack ML system handling real user requests end-to-end on cloud infrastructure.</p>
+              </div>
+            </div>
+            <div class="case-links">
+              <a href="https://github.com/DanielGregory/RestaurantRecommender" target="_blank" rel="noopener" class="btn-outline-sm">GitHub Repo</a>
+              <a href="https://youtu.be/OBftYsLB1Rs" target="_blank" rel="noopener" class="btn-ghost-sm">Video Demo</a>
+            </div>
+          </div>
+        </article>
 
-  <div id="AWS-projects" class="projects">
-    <h3>AWS Projects</h3>
-    <ul>
-      <li><a href="https://drive.google.com/file/d/1qqiasX15CbqF6lw6NJguqD21Fq1NGHEZ/view?usp=drive_link" target="_blank">Watch Demo Video (May require download due to size)</a></li>
-      <li><a href="https://github.com/shuq-git/lab4" target="_blank">GitHub Repository</a></li>
-      <li><a href="https://docs.google.com/document/d/1hY3TL_XAmC8KiNdf-Gyn9USia4UhOr-0J6oB5Zvlqgo/edit?usp=sharing" target="_blank">Visualizations</a></li>
-    </ul>
-    <p>Tools/Technologies: AWS IoT Core, AWS Greengrass, AWS Lambda, EC2, MQTT, CI/CD Pipeline</p>
-    <p>
-      Built a cloud-based IoT data ingestion and processing pipeline using AWS as part of an emissions analysis lab.
-      Simulated vehicle emission data (CO₂ levels) was published via MQTT, routed through Greengrass for local edge processing, and handled by Lambda functions to compute per-vehicle maximums, mimicking real automotive diagnostics workflows.
-    </p>
-    <ul>
-      <li>Configured AWS IoT Core for secure MQTT message routing.</li>
-      <li>Set up AWS Greengrass for edge device simulation and local compute.</li>
-      <li>Deployed AWS Lambda functions for serverless data handling.</li>
-      <li>Provisioned and managed EC2 instances to support the pipeline and simulation.</li>
-      <li>Integrated a CI/CD pipeline for automated deployment of components.</li>
-      <li>Simulated real-time data with an MQTT publisher to test end-to-end flow.</li>
-    </ul>
-  </div>
+      </div>
+    </section>
 
-  <div id="python-projects" class="projects">
-    <h3>Python Projects</h3>
-    <ul>
-      <li><a href="https://github.com/josephfallouh/lab1b_cs437/tree/main" target="_blank">Picar-X Autonomous Car</a></li>
-      <li><a href="https://drive.google.com/file/d/18CmNJieIKvaxRKUJrtxJ3W0ystr2Ehgg/view?usp=sharing" target="_blank">Watch Demo Video</a></li>
-    </ul>
-    <p>
-      A group robotics project using the Picar-X platform and Python. The goal was autonomous navigation using A* pathfinding with real-time dynamic grid updates.<br><br>
-      My contributions included:<br>
-      - Writing functions that converted the A* path into motion commands for the robot.<br>
-      - Programming the car's movement and turn logic based on orientation and path.<br>
-      - Implementing obstacle detection and dynamic grid updates.<br>
-      - Ensuring the car could recognize when it reached its destination and adapt its route as needed.
-    </p>
-    <ul>
-      <li><a href="https://github.com/DanielGregory/Plant-Monitor" target="_blank">Smart Plant Monitoring System</a></li>
-    </ul>
-    <p>
-      A smart plant monitoring system using a Raspberry Pi and various sensors (soil moisture, temperature, humidity, and light). Provides real-time environmental data and actionable alerts for plant care.<br><br>
-      The system involved:<br>
-      - Designing the hardware setup using a Raspberry Pi, soil moisture sensor, DHT22 sensor, and I2C light sensor.<br>
-      - Writing Python code to collect and process sensor data.<br>
-      - Implementing logic to alert users about plant conditions, such as low light or dry soil.
-    </p>
-    <ul>
-      <li><a href="https://github.com/DanielGregory/Python-Project.git" target="_blank">Card Game</a></li>
-    </ul>
-    <p>
-      Built during the first semester of Computer Science in undergrad. An introduction to programming concepts and object-oriented design in Python.
-    </p>
-  </div>
+    <!-- WEB APPS -->
+    <section id="apps" class="section section-alt">
+      <div class="section-inner">
+        <p class="section-label">Web Apps</p>
+        <p class="section-sub">Five full-stack apps built and deployed to production.</p>
+        <div class="apps-grid">
 
-  <div id="cpp-projects" class="projects">
-    <h3>C++ Projects</h3>
-    <ul>
-      <li><a href="https://github.com/DanielGregory/C-2024" target="_blank">Sorting Methods</a></li>
-      <li><a href="https://github.com/DanielGregory/C-2024" target="_blank">Search Trees</a></li>
-      <li><a href="https://github.com/DanielGregory/C-2024" target="_blank">Pathfinding and Graph Algorithms</a></li>
-      <li><a href="https://github.com/DanielGregory/C-2024" target="_blank">Five Card Poker (Download)</a></li>
-    </ul>
-    <p>
-      A collection of C++ projects spanning fundamental sorting algorithms, advanced data structures (binary search trees, red-black trees), pathfinding and graph algorithms, and a five-card poker game, demonstrating object-oriented design, algorithmic thinking, and memory management in C++.
-    </p>
-  </div>
+          <article class="app-card fade-in">
+            <div class="img-frame ratio-4-3" role="img" aria-label="Meal Prep app screenshot">
+              <span class="img-label">Meal Prep App</span>
+              <img src="/images/projects/meal-prep/thumbnail.png" alt="Meal prep app interface showing weekly meal plan and grocery list" loading="lazy" onerror="this.style.opacity='0'">
+            </div>
+            <div class="app-card-body">
+              <div class="app-card-header">
+                <h3>Meal Prep</h3>
+                <span class="lang-tag">TypeScript</span>
+              </div>
+              <p>Weekly meal planning with auto-generated shopping lists. Browse recipes, build custom plans, and organize grocery trips.</p>
+              <div class="app-card-links">
+                <a href="https://meal-prep-snowy-nu.vercel.app/plan" target="_blank" rel="noopener" class="btn-primary-sm">Live Demo</a>
+                <a href="https://github.com/DanielGregory/Meal_Prep" target="_blank" rel="noopener" class="btn-outline-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
 
-  <div id="Java" class="projects">
-    <h3>Java Projects</h3>
-    <ul>
-      <li><a href="https://drive.google.com/file/d/1zFtb7c88XOJFC6ZDf8MnVLMK0Co2xNgM/view?usp=sharing" target="_blank">Java Weather App (Group Project)</a></li>
-    </ul>
-    <p>
-      A university group project weather app built with Java, Firebase, OpenWeather API, and Google Maps API.<br><br>
-      Due to university policies, source code is private, but the functionality is demonstrated in the linked video.<br><br>
-      Key features I contributed to include:<br>
-      - Add City feature: Users can search for and save new city locations.<br>
-      - Google Maps integration: Displays city locations visually in the app.<br>
-      - Persistent city storage: Previously added cities automatically appear upon app launch.<br>
-      - Firebase setup: Enabled multi-user support so each user sees their own saved cities.
-    </p>
-  </div>
+          <article class="app-card fade-in">
+            <div class="img-frame ratio-4-3" role="img" aria-label="Movie Tracker app screenshot">
+              <span class="img-label">Movie Tracker</span>
+              <img src="/images/projects/movie-tracker/thumbnail.png" alt="Movie tracker app showing discovery interface and watchlist" loading="lazy" onerror="this.style.opacity='0'">
+            </div>
+            <div class="app-card-body">
+              <div class="app-card-header">
+                <h3>Movie Tracker</h3>
+                <span class="lang-tag">JavaScript</span>
+              </div>
+              <p>Discover, search, save, and manage films with personalized recommendations and a clean discovery interface.</p>
+              <div class="app-card-links">
+                <a href="https://movie-tracker-lyart-two.vercel.app/discover" target="_blank" rel="noopener" class="btn-primary-sm">Live Demo</a>
+                <a href="https://github.com/DanielGregory/Movie_Tracker" target="_blank" rel="noopener" class="btn-outline-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
 
-  <div id="R-projects" class="projects">
-    <h3>R Projects</h3>
-    <ul>
-      <li>
-        <a href="https://github.com/DanielGregory/DataAnalysis" target="_blank">Rocket Launch Success Rate Analysis – Code Repository</a>
-      </li>
-      <li>
-        <a href="https://github.com/DanielGregory/DataAnalysis/blob/main/Data%20Analysis%20Report.pdf" target="_blank">View Full Report (PDF)</a>
-      </li>
-    </ul>
-    <p>
-      Investigating the success rates of space launch vehicles after their first launch, providing insight into reliability trends across rocket families.<br><br>
-      Key Objectives:<br>
-      - Determine how likely a rocket is to succeed after its initial launch attempt.<br>
-      - Identify patterns in success rates over time and across different vehicles.<br><br>
-      Methods &amp; Insights:<br>
-      - Created visualizations including density plots and cumulative success rate charts.<br>
-      - Found that many rockets show a steep increase in success rate after their second or third launch.<br>
-      - Highlighted outliers where reliability remained low or decreased due to design changes.<br><br>
-      Conclusion: Rockets typically become significantly more reliable after the first few launches, supporting iterative design strategies used by modern launch providers.
-    </p>
-  </div>
+          <article class="app-card fade-in">
+            <div class="img-frame ratio-4-3" role="img" aria-label="Portfolio Analyzer app screenshot">
+              <span class="img-label">Portfolio Analyzer</span>
+              <img src="/images/projects/portfolio-analyzer/thumbnail.png" alt="Portfolio analyzer showing performance metrics and asset allocation charts" loading="lazy" onerror="this.style.opacity='0'">
+            </div>
+            <div class="app-card-body">
+              <div class="app-card-header">
+                <h3>Portfolio Analyzer</h3>
+                <span class="lang-tag">TypeScript</span>
+              </div>
+              <p>Performance metrics, asset allocation breakdowns, and investment insights to support informed financial decisions.</p>
+              <div class="app-card-links">
+                <a href="https://portfolio-analyzer-ten-phi.vercel.app/#" target="_blank" rel="noopener" class="btn-primary-sm">Live Demo</a>
+                <a href="https://github.com/DanielGregory/Portfolio_analyzer" target="_blank" rel="noopener" class="btn-outline-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
 
-  <div id="SQL-projects" class="projects">
-    <h3>SQL Projects</h3>
-    <ul>
-      <li><a href="https://colab.research.google.com/drive/1SP6ALwd8TdrmHi9tQQ3dnNroStLj6mYQ?usp=sharing" target="_blank">Daily Stock Market Analysis</a></li>
-    </ul>
-    <p>
-      Loads the previous day's S&amp;P 500 stock data into an SQL database to provide detailed daily market analysis.<br><br>
-      Highlights key metrics including top gainers/losers, most volatile stocks, and general market trends.<br><br>
-      SQL principles involved:<br>
-      - Data ingestion: Fetching daily stock data and importing into the database.<br>
-      - Database structure: Organizing stock data into tables with symbols, prices, and volumes.<br>
-      - SQL queries: Aggregations and filtering to surface meaningful daily insights.
-    </p>
-  </div>
+          <article class="app-card fade-in">
+            <div class="img-frame ratio-4-3" role="img" aria-label="Financial Advisor app screenshot">
+              <span class="img-label">Financial Advisor</span>
+              <img src="/images/projects/financial-advisor/thumbnail.png" alt="Financial advisor app showing investment guidance and portfolio recommendations" loading="lazy" onerror="this.style.opacity='0'">
+            </div>
+            <div class="app-card-body">
+              <div class="app-card-header">
+                <h3>Financial Advisor</h3>
+                <span class="lang-tag">TypeScript</span>
+              </div>
+              <p>Personalized investment guidance, performance tracking, and financial planning tools to manage long-term goals.</p>
+              <div class="app-card-links">
+                <a href="https://financial-advisor-gules.vercel.app/investments" target="_blank" rel="noopener" class="btn-primary-sm">Live Demo</a>
+                <a href="https://github.com/DanielGregory/Financial_Advisor" target="_blank" rel="noopener" class="btn-outline-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
 
-  <div id="excel-projects" class="projects">
-    <h3>Excel Projects</h3>
-    <ul>
-      <li><a href="https://github.com/DanielGregory/Excel/raw/main/Home%20Mortgage%20Loans.xlsx">Home Mortgage Loans</a></li>
-    </ul>
-    <p>
-      Analysis of mortgage loan approval rates to investigate disparities between racial groups. Compares approval rates for Black and White applicants, revealing systemic gaps in lending outcomes.<br><br>
-      Key Features:<br>
-      - Statistical comparison of loan approval rates across racial groups.<br>
-      - Visualization of disparities and insights based on the findings.<br><br>
-      The analysis highlights the impact of race on loan approval decisions and contributes to discussions around racial equity in financial systems.
-    </p>
-  </div>
+          <article class="app-card fade-in">
+            <div class="img-frame ratio-4-3" role="img" aria-label="Options Trader app screenshot">
+              <span class="img-label">Options Trader</span>
+              <img src="/images/projects/options-trader/thumbnail.png" alt="Options trader app showing options chain analysis and position tracking" loading="lazy" onerror="this.style.opacity='0'">
+            </div>
+            <div class="app-card-body">
+              <div class="app-card-header">
+                <h3>Options Trader</h3>
+                <span class="lang-tag">JavaScript</span>
+              </div>
+              <p>Analyze options chains, track positions, and identify market opportunities with a focused trading strategy interface.</p>
+              <div class="app-card-links">
+                <a href="https://options-trading-six.vercel.app/#" target="_blank" rel="noopener" class="btn-primary-sm">Live Demo</a>
+                <a href="https://github.com/DanielGregory/Options_Trading" target="_blank" rel="noopener" class="btn-outline-sm">GitHub</a>
+              </div>
+            </div>
+          </article>
 
-  <div id="tableau-projects" class="projects">
-    <h3>Tableau Projects</h3>
-    <ul>
-      <li><a href="https://public.tableau.com/app/profile/daniel.gregory3808/viz/IntelDataCenter/QuestionsHints" target="_blank">Intel Data Center Project</a></li>
-      <li><a href="https://public.tableau.com/app/profile/daniel.gregory3808/viz/UFOSightings_16916379739770/UFOSightingsMap" target="_blank">UFO Sightings Map</a></li>
-      <li><a href="https://public.tableau.com/app/profile/daniel.gregory3808/viz/HighestPaidCelebrities/YearlyActorEarningsBySex" target="_blank">Highest Paid Celebrities</a></li>
-    </ul>
-    <p>
-      Three Tableau projects showcasing data visualization across diverse domains:<br><br>
-      - Site analysis and visualization to determine optimal locations for a new Intel processing plant.<br>
-      - An interactive map of UFO sightings across the United States.<br>
-      - A breakdown of yearly earnings by sex among the highest-paid celebrities.<br><br>
-      Each project demonstrates applied skills in dynamic charting, calculated fields, and interactive dashboard design.
-    </p>
-  </div>
+        </div>
+      </div>
+    </section>
 
-  <div id="about" class="about">
-    <h3>About</h3>
-    <p>
-      Hi, I'm Daniel Gregory, a data analyst with experience in machine learning, data science, full-stack web development, and cloud infrastructure.<br><br>
-      <a href="https://github.com/DanielGregory" target="_blank">GitHub</a> &nbsp;|&nbsp;
+    <!-- MORE PROJECTS -->
+    <section id="more" class="section">
+      <div class="section-inner">
+        <div class="more-header">
+          <div>
+            <p class="section-label">More Projects</p>
+            <p class="section-sub">Academic, research, and coursework projects.</p>
+          </div>
+          <button class="more-toggle" id="moreToggle" aria-expanded="false" aria-controls="moreGrid">
+            <span class="toggle-text">Show Projects</span>
+            <span class="toggle-arrow">&#8964;</span>
+          </button>
+        </div>
+        <div class="more-grid" id="moreGrid" hidden>
+
+          <article class="mini-card fade-in">
+            <div class="mini-card-top">
+              <span class="mini-lang">MATLAB</span>
+            </div>
+            <h3>MATLAB Numerical Research</h3>
+            <p>Finite difference method for singularly perturbed 1D convection-diffusion problems. Tests Shishkin grids vs uniform grids across 32 to 8,192 mesh points. Derives exact analytical solutions to verify accuracy.</p>
+            <a href="https://github.com/DanielGregory/Matlab-Research/blob/main/Research.m" target="_blank" rel="noopener" class="mini-link">View Code</a>
+          </article>
+
+          <article class="mini-card fade-in">
+            <div class="mini-card-top">
+              <span class="mini-lang">AWS</span>
+            </div>
+            <h3>AWS IoT Pipeline</h3>
+            <p>Cloud-based IoT data ingestion pipeline using AWS IoT Core, Greengrass, Lambda, and EC2. Simulated vehicle CO2 emissions routed through MQTT with a full CI/CD deployment.</p>
+            <div class="mini-links">
+              <a href="https://github.com/shuq-git/lab4" target="_blank" rel="noopener" class="mini-link">GitHub</a>
+              <a href="https://drive.google.com/file/d/1qqiasX15CbqF6lw6NJguqD21Fq1NGHEZ/view?usp=drive_link" target="_blank" rel="noopener" class="mini-link">Demo Video</a>
+            </div>
+          </article>
+
+          <article class="mini-card fade-in">
+            <div class="mini-card-top">
+              <span class="mini-lang">Python</span>
+            </div>
+            <h3>Picar-X Autonomous Car</h3>
+            <p>Autonomous navigation using A* pathfinding with real-time dynamic grid updates on the Picar-X robotics platform. Contributed path-to-motion conversion, turn logic, and obstacle detection.</p>
+            <div class="mini-links">
+              <a href="https://github.com/josephfallouh/lab1b_cs437/tree/main" target="_blank" rel="noopener" class="mini-link">GitHub</a>
+              <a href="https://drive.google.com/file/d/18CmNJieIKvaxRKUJrtxJ3W0ystr2Ehgg/view?usp=sharing" target="_blank" rel="noopener" class="mini-link">Demo Video</a>
+            </div>
+          </article>
+
+          <article class="mini-card fade-in">
+            <div class="mini-card-top">
+              <span class="mini-lang">Python</span>
+            </div>
+            <h3>Smart Plant Monitor</h3>
+            <p>Raspberry Pi system with soil moisture, DHT22, and I2C light sensors. Provides real-time plant health data and actionable alerts for watering and light conditions.</p>
+            <a href="https://github.com/DanielGregory/Plant-Monitor" target="_blank" rel="noopener" class="mini-link">View Code</a>
+          </article>
+
+          <article class="mini-card fade-in">
+            <div class="mini-card-top">
+              <span class="mini-lang">C++</span>
+            </div>
+            <h3>C++ Algorithms</h3>
+            <p>Sorting algorithms, binary search trees, red-black trees, pathfinding, graph algorithms, and a five-card poker game. Emphasis on OOP design and memory management.</p>
+            <a href="https://github.com/DanielGregory/C-2024" target="_blank" rel="noopener" class="mini-link">View Code</a>
+          </article>
+
+          <article class="mini-card fade-in">
+            <div class="mini-card-top">
+              <span class="mini-lang">Java</span>
+            </div>
+            <h3>Java Weather App</h3>
+            <p>Group project weather app using Firebase, OpenWeather API, and Google Maps. Contributed city search, persistent storage, Maps integration, and multi-user Firebase setup.</p>
+            <a href="https://drive.google.com/file/d/1zFtb7c88XOJFC6ZDf8MnVLMK0Co2xNgM/view?usp=sharing" target="_blank" rel="noopener" class="mini-link">View Demo</a>
+          </article>
+
+          <article class="mini-card fade-in">
+            <div class="mini-card-top">
+              <span class="mini-lang">R</span>
+            </div>
+            <h3>Rocket Launch Analysis</h3>
+            <p>Statistical analysis of space launch vehicle success rates after first launch. Found most rockets improve significantly after the second or third attempt, validating iterative design strategies.</p>
+            <div class="mini-links">
+              <a href="https://github.com/DanielGregory/DataAnalysis" target="_blank" rel="noopener" class="mini-link">GitHub</a>
+              <a href="https://github.com/DanielGregory/DataAnalysis/blob/main/Data%20Analysis%20Report.pdf" target="_blank" rel="noopener" class="mini-link">Report (PDF)</a>
+            </div>
+          </article>
+
+          <article class="mini-card fade-in">
+            <div class="mini-card-top">
+              <span class="mini-lang">SQL</span>
+            </div>
+            <h3>Daily Stock SQL Analysis</h3>
+            <p>Loads prior-day S&amp;P 500 data into SQL and surfaces top gainers, losers, and most volatile stocks. Demonstrates data ingestion, table structuring, and analytical querying.</p>
+            <a href="https://colab.research.google.com/drive/1SP6ALwd8TdrmHi9tQQ3dnNroStLj6mYQ?usp=sharing" target="_blank" rel="noopener" class="mini-link">View Notebook</a>
+          </article>
+
+          <article class="mini-card fade-in">
+            <div class="mini-card-top">
+              <span class="mini-lang">Tableau</span>
+            </div>
+            <h3>Tableau Dashboards</h3>
+            <p>Three interactive dashboards: Intel data center site analysis, UFO sightings map, and highest-paid celebrities by year and sex. Demonstrates dynamic charting and calculated fields.</p>
+            <div class="mini-links">
+              <a href="https://public.tableau.com/app/profile/daniel.gregory3808/viz/IntelDataCenter/QuestionsHints" target="_blank" rel="noopener" class="mini-link">Intel</a>
+              <a href="https://public.tableau.com/app/profile/daniel.gregory3808/viz/UFOSightings_16916379739770/UFOSightingsMap" target="_blank" rel="noopener" class="mini-link">UFO</a>
+              <a href="https://public.tableau.com/app/profile/daniel.gregory3808/viz/HighestPaidCelebrities/YearlyActorEarningsBySex" target="_blank" rel="noopener" class="mini-link">Celebrities</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-alt">
+      <div class="section-inner about-inner">
+        <div class="about-text">
+          <p class="section-label">About</p>
+          <p class="about-bio">Portfolio analyst with a master's in CS and a bachelor's in math. I built an ML trading model from scratch, shipped it, and it got me my current role. Now focused on applying that instinct to larger-scale ML engineering problems, with an eye toward AI/ML systems in quantitative finance and aerospace.</p>
+          <div class="about-contact">
+            <a href="https://github.com/DanielGregory" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
+            <a href="mailto:dannytgregory@aol.com" class="btn btn-outline">Email</a>
+          </div>
+        </div>
+        <div class="skills-wrap">
+          <p class="skills-heading">Skills</p>
+          <ul class="skills-grid" aria-label="Skills">
+            <li>Python</li>
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>NLP</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+            <li>R</li>
+            <li>MATLAB</li>
+            <li>C++</li>
+            <li>AWS</li>
+            <li>Flask</li>
+            <li>pandas</li>
+            <li>scikit-learn</li>
+            <li>TensorFlow</li>
+            <li>Tableau</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Daniel Gregory</span>
+      <span class="footer-sep">|</span>
       <a href="mailto:dannytgregory@aol.com">dannytgregory@aol.com</a>
-    </p>
-  </div>
+      <span class="footer-sep">|</span>
+      <a href="https://github.com/DanielGregory" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
 
-  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8679;</button>
 
   <script>
-    var topnavLinks = document.getElementById("topnavLinks");
-    function showMenu() {
-      topnavLinks.style.left = "0";
-    }
-    function hideMenu() {
-      topnavLinks.style.left = "-250px";
-    }
+    var siteNav = document.getElementById('site-nav');
+    var backToTop = document.getElementById('backToTop');
 
-    var backToTop = document.getElementById("backToTop");
-    window.addEventListener("scroll", function () {
-      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+    window.addEventListener('scroll', function () {
+      siteNav.classList.toggle('scrolled', window.scrollY > 40);
+      backToTop.style.display = window.scrollY > 400 ? 'flex' : 'none';
     });
 
-    var sections = document.querySelectorAll(".projects, .about, .section-divider");
-    var navLinks = document.querySelectorAll(".topnav ul li a");
-    var observer = new IntersectionObserver(function (entries) {
+    var hamburger = document.getElementById('navHamburger');
+    var navLinksEl = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', function () {
+      var open = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!open));
+      navLinksEl.classList.toggle('open', !open);
+      hamburger.classList.toggle('open', !open);
+    });
+
+    navLinksEl.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        hamburger.setAttribute('aria-expanded', 'false');
+        navLinksEl.classList.remove('open');
+        hamburger.classList.remove('open');
+      });
+    });
+
+    var moreToggle = document.getElementById('moreToggle');
+    var moreGrid = document.getElementById('moreGrid');
+
+    moreToggle.addEventListener('click', function () {
+      var open = moreToggle.getAttribute('aria-expanded') === 'true';
+      moreToggle.setAttribute('aria-expanded', String(!open));
+      moreGrid.hidden = open;
+      moreToggle.querySelector('.toggle-arrow').style.transform = open ? '' : 'rotate(180deg)';
+      moreToggle.querySelector('.toggle-text').textContent = open ? 'Show Projects' : 'Hide Projects';
+    });
+
+    var navAnchors = document.querySelectorAll('.nav-link');
+    var allSections = document.querySelectorAll('section[id]');
+
+    var activeObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          navLinks.forEach(function (link) {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === "#" + entry.target.id) {
-              link.classList.add("active");
-            }
+          navAnchors.forEach(function (a) {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
           });
         }
       });
-    }, { threshold: 0.25 });
-    sections.forEach(function (section) { observer.observe(section); });
+    }, { threshold: 0.3 });
+
+    allSections.forEach(function (s) { activeObserver.observe(s); });
+
+    var fadeItems = document.querySelectorAll('.fade-in');
+    var fadeObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    fadeItems.forEach(function (el) { fadeObserver.observe(el); });
   </script>
+
 </body>
 </html>
