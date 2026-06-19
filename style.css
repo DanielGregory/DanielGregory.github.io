@@ -1,43 +1,60 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  color: #000000;
-  font-family: Goudy Old Style;
+  background: #f0f2f5;
+  color: #1a1a1a;
+  font-family: 'Lato', 'Goudy Old Style', sans-serif;
+  line-height: 1.75;
 }
 
+/* ── HEADER ── */
+
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
     url("https://cdn.pixabay.com/photo/2024/05/23/09/12/ai-generated-8782744_1280.jpg");
   min-height: 75vh;
   width: 100%;
   background-position: center;
   background-size: cover;
-  position: static;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
 
+/* ── NAV ── */
+
 .topnav {
-  font-size: 20px;
+  font-size: 17px;
   display: flex;
-  padding: 1% 3%;
+  padding: 18px 3%;
   justify-content: center;
   text-align: center;
+}
+
+.topnav ul {
+  margin: 0;
+  padding: 0;
 }
 
 .topnav ul li {
   list-style: none;
   display: inline-block;
   position: relative;
-  padding: 15px 15px;
+  padding: 10px 18px;
 }
 
 .topnav ul li a {
   color: #fff;
   text-decoration: none;
+  letter-spacing: 0.5px;
   transition: color 0.3s;
 }
 
@@ -49,113 +66,216 @@ body {
   content: '';
   width: 0%;
   height: 2px;
-  background: #fff;
+  background: #ffd700;
   display: block;
   margin: auto;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .topnav ul li:hover::after {
   width: 100%;
 }
 
+/* ── HERO TITLE ── */
+
 .title {
-  text-shadow: 4px 4px 4px #000;
-  color: #ffffff;
-  font-size: 36px;
-  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 60px;
   text-align: center;
 }
 
-.projects {
-  width: 80%;
-  margin: auto;
-  padding: 20px 0;
-  color: #000000;
-  border-top: 1px solid #e0e0e0;
+.title h1 {
+  font-family: 'Playfair Display', 'Goudy Old Style', Georgia, serif;
+  font-size: 58px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.6);
+  margin: 0 0 14px;
+  letter-spacing: 1px;
 }
 
-.projects:first-of-type {
-  border-top: none;
+.title .hero-sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.82);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ── PROJECT CARDS ── */
+
+.projects {
+  width: 80%;
+  margin: 22px auto;
+  padding: 34px 44px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e4e4e4;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+  color: #1a1a1a;
 }
 
 .projects h3 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #000000;
+  font-family: 'Playfair Display', 'Goudy Old Style', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #143434;
+  border-bottom: 2px solid #143434;
+  padding-bottom: 10px;
+  margin: 0 0 18px;
 }
 
 .projects ul {
   list-style: none;
   padding: 0;
+  margin: 0 0 4px;
 }
 
 .projects ul li {
-  margin: 5px 0;
+  margin: 7px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
+/* default project link */
 .projects ul li a {
-  color: blue;
+  color: #143434;
   text-decoration: underline;
-  transition: color 0.3s, background-color 0.3s;
+  text-underline-offset: 3px;
+  transition: color 0.25s;
+  font-weight: 400;
 }
 
 .projects ul li a:hover {
-  color: #ffd700;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 5px;
+  color: #c8960a;
 }
 
-.section-divider {
-  width: 100%;
+/* Live Demo pill button */
+.projects ul li a[href*="vercel.app"] {
+  display: inline-block;
   background: #143434;
   color: #fff;
-  padding: 32px 0;
-  margin: 20px 0 0;
+  text-decoration: none;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.projects ul li a[href*="vercel.app"]:hover {
+  background: #0d2424;
+  color: #ffd700;
+}
+
+/* GitHub outline pill button */
+.projects ul li a[href*="github.com"] {
+  display: inline-block;
+  border: 1.5px solid #143434;
+  color: #143434;
+  text-decoration: none;
+  padding: 3px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s;
+}
+
+.projects ul li a[href*="github.com"]:hover {
+  background: #143434;
+  color: #fff;
+}
+
+p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 6px;
+}
+
+/* ── SECTION DIVIDER ── */
+
+.section-divider {
+  background: #143434;
+  color: #fff;
+  padding: 48px 24px;
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 .section-divider h2 {
+  font-family: 'Playfair Display', 'Goudy Old Style', Georgia, serif;
   font-size: 30px;
-  margin: 0 0 10px;
-  font-family: Goudy Old Style;
-  font-weight: normal;
+  font-weight: 400;
   letter-spacing: 1px;
+  margin: 0 0 12px;
+  color: #fff;
 }
 
 .section-divider p {
-  font-size: 17px;
-  color: #ccc;
-  max-width: 700px;
-  margin: 0 auto;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 640px;
+  margin: 0;
+  line-height: 1.7;
 }
+
+/* ── ABOUT ── */
 
 .about {
   width: 80%;
-  margin: auto;
-  text-align: left;
-  padding: 20px 0 40px;
-  color: #000;
-  font-size: 20px;
-  border-top: 1px solid #e0e0e0;
+  margin: 22px auto 40px;
+  padding: 34px 44px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e4e4e4;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+  color: #1a1a1a;
+  font-size: 17px;
+}
+
+.about h3 {
+  font-family: 'Playfair Display', 'Goudy Old Style', Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #143434;
+  border-bottom: 2px solid #143434;
+  padding-bottom: 10px;
+  margin: 0 0 18px;
+}
+
+.about p {
+  font-size: 17px;
+  color: #333;
+  margin: 0;
 }
 
 .about a {
-  color: blue;
+  color: #143434;
   text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+  transition: color 0.2s;
 }
 
 .about a:hover {
-  color: #ffd700;
+  color: #c8960a;
 }
 
-p {
-  font-size: 18px;
-}
-
-nav .fa {
-  display: none;
-}
+/* ── BACK TO TOP ── */
 
 .back-to-top {
   display: none;
@@ -166,37 +286,61 @@ nav .fa {
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  font-size: 24px;
+  width: 46px;
+  height: 46px;
+  font-size: 26px;
   cursor: pointer;
   z-index: 999;
-  opacity: 0.85;
-  transition: opacity 0.2s;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+  line-height: 1;
 }
 
 .back-to-top:hover {
   opacity: 1;
+  transform: translateY(-2px);
 }
 
+/* ── NAV HAMBURGER ICON ── */
+
+nav .fa {
+  display: none;
+}
+
+/* ── MOBILE ── */
+
 @media (max-width: 700px) {
-  .title {
-    font-size: 20px;
+  .title h1 {
+    font-size: 32px;
   }
+
+  .title .hero-sub {
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+
+  .projects,
+  .about {
+    width: 92%;
+    padding: 24px 22px;
+  }
+
   .topnav ul li {
     display: block;
   }
+
   .topnav {
     position: absolute;
     background: #143434;
     height: 100vh;
-    width: 200px;
+    width: 220px;
     top: 0;
-    left: -250px;
+    left: -270px;
     text-align: left;
     z-index: 2;
-    transition: 1s;
+    transition: left 0.4s ease;
   }
+
   nav .fa {
     display: block;
     color: #fff;
@@ -204,6 +348,7 @@ nav .fa {
     font-size: 22px;
     cursor: pointer;
   }
+
   .topnav ul {
     padding: 25px;
   }
