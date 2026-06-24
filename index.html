@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title>Daniel Gregory's Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Daniel Gregory, data analyst with projects in machine learning, full-stack web apps, data science, cloud infrastructure, and more.">
+  <meta name="description" content="Daniel Gregory, Data &amp; Analytics Engineer with projects in machine learning, full-stack web apps, data science, cloud infrastructure, and more.">
   <meta property="og:title" content="Daniel Gregory's Portfolio">
-  <meta property="og:description" content="Data analyst with projects spanning ML, TypeScript web apps, AWS cloud, data science, C++, and more.">
+  <meta property="og:description" content="Data &amp; Analytics Engineer with projects spanning ML (GRU, SGD, PPO RL), TypeScript web apps, AWS cloud, data science, and more.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -36,30 +36,36 @@
     <h3>Machine Learning Projects</h3>
     <ul>
       <li>
-        <a href="https://github.com/DanielGregory/Excel/raw/main/Model_50_3-27-25_para.xlsx">SGD-Results</a>
-        <a href="https://github.com/DanielGregory/Excel/raw/main/S&P500_RNN_3-27-25_500.xlsx">RNN-Results</a>
-        <a href="https://github.com/DanielGregory/Excel/raw/main/AI-Example.xlsx">RL-Results</a>
-      </li>
-      <li>
-        <a href="https://github.com/DanielGregory/Stock-Market-AI" target="_blank">AI-Driven Swing Trading Models</a>
+        <a href="https://github.com/DanielGregory/Stock-Market-AI" target="_blank">Stock Market AI — GitHub Repository</a>
       </li>
     </ul>
     <p>
-      Developed machine learning models to predict 1-week price movements for individual stocks. Currently, the RNN-based model is the primary model in use and has consistently outperformed the broader market, generating profitable trades without relying on weekly swing strategies.<br><br>
-      Current Models:<br>
-      - SGDClassifier Based Model<br>
-      - Recurrent Neural Network (RNN) Based Model<br>
-      - Reinforcement Learning (RL) Based Model<br><br>
-      Overall Performance:<br>
-      - RNN Model: Since June, the model has achieved an overall portfolio increase of ~15%, consistently generating profitable weekly trades.<br>
-      - SGD and RL Models: Still under evaluation and provide additional insights for strategy refinement.
+      An AI-driven stock prediction system that forecasts next-day price direction across the full S&amp;P 500, NASDAQ, and NYSE universe. Built as a sequential ensemble pipeline — each stage feeds its output as a feature into the next:<br><br>
+
+      <strong>Stage 1 — GRU (PyTorch):</strong> A 2-layer Gated Recurrent Unit trained on 20-day price sequences. Uses a custom <em>TradingLoss</em> that weights prediction errors by the magnitude of the upcoming price move (aligning training directly with P&amp;L impact) and applies an anti-lag penalty that discourages blind trend-following on lagging indicators. Includes early stopping, gradient clipping, and a learning rate scheduler.<br><br>
+
+      <strong>Stage 2 — SGD Classifier (scikit-learn):</strong> A linear classifier trained on technical indicators augmented with the GRU's probability output, giving it sequential context it couldn't derive from a single-row view. Tuned via GridSearchCV with TimeSeriesSplit cross-validation and updated incrementally with <em>partial_fit</em>.<br><br>
+
+      <strong>Stage 3 — PPO Reinforcement Learning (stable_baselines3):</strong> A Proximal Policy Optimization agent whose observation space combines base technical features, the GRU probability, and SGD confidence score. The agent learns when to trust each upstream signal and sizes positions accordingly.<br><br>
+
+      <strong>Features:</strong> RSI, MACD, OBV, ATR, volatility, volume, moving averages, momentum, and daily news sentiment via Finnhub API + VADER. Models are saved per-ticker with incremental updates; full S&amp;P 500 runs export results to Excel.<br><br>
+
+      <strong>Performance:</strong> The GRU model has achieved a ~15% portfolio return since June, consistently outperforming the broader market on a weekly basis.<br><br>
+
+      <strong>Tech:</strong> Python · PyTorch · scikit-learn · stable_baselines3 · gymnasium · yfinance · Finnhub API · VADER Sentiment · pandas · numpy
     </p>
     <ul>
       <li>
-        <a href="https://colab.research.google.com/drive/1Q15vtjbcG_I_Vy9XsZuA4qYmTbe-_fZN?usp=sharing">Stock Market AI (Google Colab – Outdated Version)</a>
+        <a href="https://github.com/DanielGregory/Excel/raw/main/Model_50_3-27-25_para.xlsx">SGD Results</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/DanielGregory/Excel/raw/main/S&P500_RNN_3-27-25_500.xlsx">GRU Results</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/DanielGregory/Excel/raw/main/AI-Example.xlsx">RL Results</a>
+      </li>
+      <li>
+        <a href="https://colab.research.google.com/drive/1Q15vtjbcG_I_Vy9XsZuA4qYmTbe-_fZN?usp=sharing">Early Reference Version (Google Colab)</a>
       </li>
     </ul>
-    <p>*Note: This version of the model is outdated and is provided for reference. The current models have undergone significant improvements and updates.</p>
   </div>
 
   <div id="webapp-projects" class="projects">
