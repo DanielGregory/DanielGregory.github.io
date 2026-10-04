@@ -65,11 +65,12 @@
     <ul class="bullets">
       <li><strong>Simulation engine:</strong> a pure TypeScript discrete-event engine (arrivals, triage errors, deterioration, patients leaving unseen, misdiagnoses and 72-hour bounce-backs, inpatient boarding, lab and imaging queues, nurse ratios, staff fatigue). Fully deterministic: the same seed gives byte-identical results.</li>
       <li><strong>Validated against queueing theory:</strong> automated tests check the sim against the Erlang C formula and Little's Law, plus determinism and monotonicity checks.</li>
+      <li><strong>Real data:</strong> an open-data pipeline fits the model to MIMIC-IV-ED emergency department records in one command; the first fit, on the public MIMIC-IV-ED demo, runs as a pipeline check ahead of the full credentialed dataset.</li>
       <li><strong>Hospital planner:</strong> compares a baseline department with what-if changes on the same random days, reporting each KPI with 95% confidence intervals, a forest plot, a root-cause "bottleneck finder", and a printable report. It can calibrate itself from a hospital's visit records (CSV).</li>
       <li><strong>The game:</strong> 8 story levels (Flu Season, Boarding Crisis, Mass Casualty, The New Build...), a career mode, a daily challenge, a sandbox with every system toggleable, and a "build your own hospital" mode where you draw rooms directly onto the 3D floor.</li>
       <li><strong>Research tooling:</strong> a headless command-line runner, baseline policies, a simulated-annealing search for the best-found setup, and a Python Gym-style wrapper for reinforcement learning.</li>
     </ul>
-    <p class="note">About 21,000 lines of TypeScript with 31 test files (280 tests), plus end-to-end browser tests.</p>
+    <p class="note">About 21,000 lines of TypeScript with 33 test files (287 tests), plus end-to-end browser tests.</p>
   </div>
 
   <div id="party-games" class="projects featured">
