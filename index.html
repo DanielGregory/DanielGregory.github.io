@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Daniel Gregory's Portfolio</title>
+  <title>Daniel Gregory | Data &amp; Analytics Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Daniel Gregory, data analyst with projects in machine learning, full-stack web apps, data science, cloud infrastructure, and more.">
+  <meta name="description" content="Daniel Gregory, Data &amp; Analytics Engineer. Projects in simulation, machine learning, full-stack web apps, multiplayer games, data science, and cloud infrastructure.">
   <meta property="og:title" content="Daniel Gregory's Portfolio">
-  <meta property="og:description" content="Data analyst with projects spanning ML, TypeScript web apps, AWS cloud, data science, C++, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danielgregory.github.io/">
+  <meta property="og:description" content="Data &amp; Analytics Engineer. An ER simulation game and hospital planner, multiplayer party games, ML trading models, and full-stack web apps.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
   <section class="header">
@@ -17,8 +19,9 @@
       <div class="topnav" id="topnavLinks">
         <i class="fa fa-times" onclick="hideMenu()"></i>
         <ul>
-          <li><a href="#ml-projects" onclick="hideMenu()">Machine Learning</a></li>
+          <li><a href="#featured" onclick="hideMenu()">Featured</a></li>
           <li><a href="#webapp-projects" onclick="hideMenu()">Web Apps</a></li>
+          <li><a href="#ml-projects" onclick="hideMenu()">Machine Learning</a></li>
           <li><a href="#data-science-projects" onclick="hideMenu()">Data Science</a></li>
           <li><a href="#academic" onclick="hideMenu()">Academic &amp; Research</a></li>
           <li><a href="#about" onclick="hideMenu()">About</a></li>
@@ -29,85 +32,190 @@
     <div class="title">
       <h1>Daniel Gregory</h1>
       <p class="hero-sub">Data &amp; Analytics Engineer</p>
+      <p class="hero-tagline">Simulation, machine learning, and full-stack web apps, built end to end and deployed.</p>
+      <div class="hero-links">
+        <a href="#featured">See featured work</a>
+        <a href="https://github.com/DanielGregory" target="_blank">GitHub</a>
+        <a href="mailto:dannytgregory10@gmail.com">Email</a>
+      </div>
     </div>
   </section>
 
-  <div id="ml-projects" class="projects">
-    <h3>Machine Learning Projects</h3>
+  <div id="featured" class="section-divider">
+    <h2>Featured Projects</h2>
+    <p>The biggest things I've built recently. All three are live; try them in the browser.</p>
+  </div>
+
+  <div id="er-sim" class="projects featured">
+    <span class="badge">Featured</span>
+    <h3>ER Simulation Game &amp; Hospital Planner</h3>
+    <div class="tags"><span>TypeScript</span><span>React</span><span>three.js</span><span>Discrete-event simulation</span><span>Python</span><span>Vitest</span><span>Playwright</span></div>
     <ul>
-      <li>
-        <a href="https://github.com/DanielGregory/Excel/raw/main/Model_50_3-27-25_para.xlsx">SGD-Results</a>
-        <a href="https://github.com/DanielGregory/Excel/raw/main/S&P500_RNN_3-27-25_500.xlsx">RNN-Results</a>
-        <a href="https://github.com/DanielGregory/Excel/raw/main/AI-Example.xlsx">RL-Results</a>
-      </li>
-      <li>
-        <a href="https://github.com/DanielGregory/Stock-Market-AI" target="_blank">AI-Driven Swing Trading Models</a>
-      </li>
+      <li><a href="https://hospital-research-game-topaz.vercel.app" target="_blank">Play It (Live Demo)</a></li>
+    </ul>
+    <div class="shots">
+      <a href="images/er-sim-3d.jpg" target="_blank"><img src="images/er-sim-3d.jpg" alt="3D view of the simulated emergency department: waiting room, curtained cubicles, nurses' station and fast-track lane, with patients and staff marked by acuity and role" width="852" height="576" loading="lazy"></a>
+      <a href="images/er-sim-debrief.jpg" target="_blank"><img src="images/er-sim-debrief.jpg" alt="End-of-shift debrief: plain-language summary of what happened, waiting time by cause, and a timeline of the shift" width="1000" height="513" loading="lazy"></a>
+      <a href="images/er-sim-planner.jpg" target="_blank"><img src="images/er-sim-planner.jpg" alt="Planner forest plot: change in median door-to-provider time for five what-if scenarios, with 95% confidence intervals" width="1000" height="332" loading="lazy"></a>
+    </div>
+    <p>
+      An emergency department simulator that is both a game and a planning tool. Players design the floor plan, staffing, and patient process of an ER, then watch a realistic simulation play out in 3D, with patients and staff walking between curtained cubicles, trauma rooms, triage booths, and a fast-track lane.
+    </p>
+    <ul class="bullets">
+      <li><strong>Simulation engine:</strong> a pure TypeScript discrete-event engine (arrivals, triage errors, deterioration, patients leaving unseen, misdiagnoses and 72-hour bounce-backs, inpatient boarding, lab and imaging queues, nurse ratios, staff fatigue). Fully deterministic: the same seed gives byte-identical results.</li>
+      <li><strong>Validated against queueing theory:</strong> automated tests check the sim against the Erlang C formula and Little's Law, plus determinism and monotonicity checks.</li>
+      <li><strong>Hospital planner:</strong> compares a baseline department with what-if changes on the same random days, reporting each KPI with 95% confidence intervals, a forest plot, a root-cause "bottleneck finder", and a printable report. It can calibrate itself from a hospital's visit records (CSV).</li>
+      <li><strong>The game:</strong> 8 story levels (Flu Season, Boarding Crisis, Mass Casualty, The New Build...), a career mode, a daily challenge, a sandbox with every system toggleable, and a "build your own hospital" mode where you draw rooms directly onto the 3D floor.</li>
+      <li><strong>Research tooling:</strong> a headless command-line runner, baseline policies, a simulated-annealing search for the best-found setup, and a Python Gym-style wrapper for reinforcement learning.</li>
+    </ul>
+    <p class="note">About 21,000 lines of TypeScript with 31 test files, plus end-to-end browser tests. Source code is private; available on request.</p>
+  </div>
+
+  <div id="party-games" class="projects featured">
+    <span class="badge">Featured</span>
+    <h3>PartyGames</h3>
+    <div class="tags"><span>TypeScript</span><span>Next.js</span><span>Supabase Realtime</span><span>Postgres</span><span>Vercel</span></div>
+    <ul>
+      <li><a href="https://party-games-ruby.vercel.app" target="_blank">Play It (Live Demo)</a></li>
     </ul>
     <p>
-      Developed machine learning models to predict 1-week price movements for individual stocks. Currently, the RNN-based model is the primary model in use and has consistently outperformed the broader market, generating profitable trades without relying on weekly swing strategies.<br><br>
-      Current Models:<br>
-      - SGDClassifier Based Model<br>
-      - Recurrent Neural Network (RNN) Based Model<br>
-      - Reinforcement Learning (RL) Based Model<br><br>
-      Overall Performance:<br>
-      - RNN Model: Since June, the model has achieved an overall portfolio increase of ~15%, consistently generating profitable weekly trades.<br>
-      - SGD and RL Models: Still under evaluation and provide additional insights for strategy refinement.
+      Multiplayer party games played on everyone's own phone. No accounts: a host creates a room, shares a 4-letter code or QR code, and friends join from their browsers.
     </p>
-    <ul>
-      <li>
-        <a href="https://colab.research.google.com/drive/1Q15vtjbcG_I_Vy9XsZuA4qYmTbe-_fZN?usp=sharing">Stock Market AI (Google Colab – Outdated Version)</a>
-      </li>
+    <ul class="bullets">
+      <li><strong>19 game modes:</strong> Spyfall, Fibbing It, Trivia, Most Likely To, Pictionary, Wordle, Boggle, Word Search, Hangman, Battleship, Connect Four, Guess Who, Uno, Sorry!, Yahtzee, War, Blackjack, Texas Hold'em, and a host-run quiz.</li>
+      <li><strong>Server-authoritative design:</strong> all game logic runs on the server. After every move, each player gets their own redacted view on a private realtime channel, so hidden information (who the spy is, who wrote which fake answer, other players' cards) never reaches the wrong phone.</li>
+      <li><strong>Pluggable game modules:</strong> each game implements one shared interface, so adding a game needs no changes to the lobby, scoreboard, or round flow. Host-adjustable settings, a cross-game scoreboard, and animated dice, cards, and boards.</li>
     </ul>
-    <p>*Note: This version of the model is outdated and is provided for reference. The current models have undergone significant improvements and updates.</p>
+    <p class="note">Source code is private; available on request.</p>
+  </div>
+
+  <div id="portfolio-analyzer" class="projects featured">
+    <span class="badge">Featured</span>
+    <h3>Portfolio Analyzer</h3>
+    <div class="tags"><span>Python</span><span>FastAPI</span><span>pandas</span><span>NumPy</span><span>JavaScript</span><span>PWA</span><span>Web Push</span></div>
+    <ul>
+      <li><a href="https://portfolio-analyzer-ten-phi.vercel.app/" target="_blank">Try It (Live Demo)</a></li>
+    </ul>
+    <p>
+      A personal investing terminal: tracks a stock and ETF portfolio, benchmarks it against VOO, and surfaces technical signals.
+    </p>
+    <ul class="bullets">
+      <li>Interactive candlestick charts with volume, timeframes, indicator toggles, smooth pan and zoom, and a fullscreen ticker terminal with a live watchlist.</li>
+      <li>Automatic support/resistance detection, sector rotation, momentum and breakout signals, and a holdings health review.</li>
+      <li>Price and dollar-cost-averaging alerts delivered by web push on a daily schedule; installable on a phone as a progressive web app.</li>
+      <li>Multiple portfolio profiles with per-style analysis, daily performance, and an equity curve against the benchmark.</li>
+    </ul>
+    <p class="note">Source code is private; available on request.</p>
   </div>
 
   <div id="webapp-projects" class="projects">
     <h3>Web App Projects</h3>
-    <ul>
-      <li>
-        <a href="https://meal-prep-snowy-nu.vercel.app/plan" target="_blank">Meal Prep App (Live Demo)</a>
-      </li>
-    </ul>
-    <p>
-      A full-stack meal planning application built with TypeScript. Generates weekly meal plans and shopping lists to streamline meal preparation. Users can browse recipes, build custom plans, and organize grocery shopping efficiently.
-    </p>
-    <ul>
-      <li>
-        <a href="https://movie-tracker-lyart-two.vercel.app/discover" target="_blank">Movie Tracker / Recommender (Live Demo)</a>
-      </li>
-    </ul>
-    <p>
-      A JavaScript movie tracking and recommendation application. Users can discover, search, save, and manage films with personalized recommendations and a clean discovery interface.
-    </p>
-    <ul>
-      <li>
-        <a href="https://portfolio-analyzer-ten-phi.vercel.app/#" target="_blank">Portfolio Analyzer (Live Demo)</a>
-      </li>
-    </ul>
-    <p>
-      A web-based financial portfolio analysis tool providing performance metrics, asset allocation breakdowns, and insights to support informed investment decisions.
-    </p>
-    <ul>
-      <li>
-        <a href="https://financial-advisor-gules.vercel.app/investments" target="_blank">Financial Advisor (Live Demo)</a>
-      </li>
-    </ul>
-    <p>
-      A TypeScript application providing personalized investment guidance and financial planning tools. Tracks performance, offers portfolio recommendations, and helps users manage their financial goals.
-    </p>
-    <ul>
-      <li>
-        <a href="https://options-trading-six.vercel.app/#" target="_blank">Options Trader (Live Demo)</a>
-      </li>
-    </ul>
-    <p>
-      A JavaScript web application for analyzing and tracking options trading strategies. Provides tools for evaluating options chains, tracking positions, and identifying market opportunities.
-    </p>
+
+    <div class="entry">
+      <h4>Financial Advisor</h4>
+      <div class="tags"><span>TypeScript</span><span>Next.js</span><span>React</span><span>Chart.js</span></div>
+      <ul>
+        <li><a href="https://financial-advisor-gules.vercel.app/investments" target="_blank">Live Demo</a></li>
+      </ul>
+      <p>
+        An all-in-one personal finance planner. A guided setup wizard feeds a dashboard of key metrics, and every page shows how a decision affects the others.<br>
+        - Retirement projections adjusted for inflation, with strategy options (4% rule, dividend income, Coast FIRE) and a glide path.<br>
+        - House planning: affordability, full cost breakdown, monthly payment analysis, and impact on retirement.<br>
+        - "Can I afford it?" calculators, goals with down-payment helpers, budget, debt, net worth, tax planning, and an insurance checklist.
+      </p>
+    </div>
+
+    <div class="entry">
+      <h4>Meal Prep App</h4>
+      <div class="tags"><span>TypeScript</span><span>Next.js</span><span>Supabase</span><span>Spoonacular API</span></div>
+      <ul>
+        <li><a href="https://meal-prep-snowy-nu.vercel.app/plan" target="_blank">Live Demo</a></li>
+      </ul>
+      <p>
+        Plans a week of meals and builds the grocery list. Users swipe through real recipes (Spoonacular API), and the swipe order learns their preferences.<br>
+        - Weekly planner with leftover and cooking-schedule controls, snack and dessert slots, and difficulty filters.<br>
+        - Personal macro targets from a profile, a Today tab with meal check-ins and water tracking, habit streaks.<br>
+        - Cost estimates from an ingredient price table with regional adjustment, and a friends challenge leaderboard.
+      </p>
+    </div>
+
+    <div class="entry">
+      <h4>Movie Tracker / Recommender</h4>
+      <div class="tags"><span>React</span><span>Vite</span><span>Supabase</span><span>TMDB API</span><span>Framer Motion</span></div>
+      <ul>
+        <li><a href="https://movie-tracker-lyart-two.vercel.app/discover" target="_blank">Live Demo</a></li>
+      </ul>
+      <p>
+        Track movies and TV shows, discover new ones, and decide what to watch tonight.<br>
+        - "Pick Tonight": swipe through recommendations weighted toward your taste, filtered by genre, type, and streaming service.<br>
+        - Discover with search and genre filters, a watchlist, and Movies/TV libraries with watch stats.<br>
+        - Social features: friends, an activity feed, notifications, invite links, a watched-hours leaderboard, and Group Night picks.
+      </p>
+    </div>
+
+    <div class="entry">
+      <h4>Options Trader</h4>
+      <div class="tags"><span>JavaScript</span></div>
+      <ul>
+        <li><a href="https://options-trading-six.vercel.app/" target="_blank">Live Demo</a></li>
+      </ul>
+      <p>
+        A web application for analyzing and tracking options trading strategies. Provides tools for evaluating options chains, tracking positions, and identifying market opportunities.
+      </p>
+    </div>
+
+    <p class="note">Web app source code is private; available on request.</p>
+  </div>
+
+  <div id="game-dev" class="projects">
+    <h3>Game Development</h3>
+    <div class="entry">
+      <h4>ER Shift <span class="status">In development</span></h4>
+      <div class="tags"><span>Godot 4</span><span>GDScript</span><span>Multiplayer networking</span></div>
+      <p>
+        A cartoony first-person co-op game about running an emergency room, aimed at a Steam release. Players take over a run-down hospital and grow it shift by shift.<br>
+        - Built co-op first: the host owns all game state and every system is networked, even in solo play.<br>
+        - A phone that works as a radio and live floor map: route incoming ambulances, hold beds, and assign patients from anywhere.<br>
+        - Short hands-on treatment mini-games, patient charts with vitals that drift and reveal hidden problems, and deterioration if patients wait too long.<br>
+        - Build your own ER between shifts (a construction crew builds what you place), hire staff, and climb the trauma-level ladder from Unranked to Level I.<br>
+        - Arrival rates and treatment times are seeded from the ER simulation above.
+      </p>
+    </div>
+  </div>
+
+  <div id="ml-projects" class="projects">
+    <h3>Machine Learning Projects</h3>
+    <div class="entry">
+      <h4>AI-Driven Swing Trading Models</h4>
+      <div class="tags"><span>Python</span><span>RNN</span><span>scikit-learn</span><span>Reinforcement learning</span></div>
+      <ul>
+        <li><a href="https://github.com/DanielGregory/Stock-Market-AI" target="_blank">GitHub</a></li>
+        <li class="files">Results:
+          <a href="https://github.com/DanielGregory/Excel/raw/main/Model_50_3-27-25_para.xlsx">SGD (.xlsx)</a>
+          <a href="https://github.com/DanielGregory/Excel/raw/main/S&amp;P500_RNN_3-27-25_500.xlsx">RNN (.xlsx)</a>
+          <a href="https://github.com/DanielGregory/Excel/raw/main/AI-Example.xlsx">RL (.xlsx)</a>
+        </li>
+      </ul>
+      <p>
+        Machine learning models that predict 1-week price movements for individual stocks. The RNN-based model is the primary model in use and has consistently outperformed the broader market.<br><br>
+        Current Models:<br>
+        - SGDClassifier Based Model<br>
+        - Recurrent Neural Network (RNN) Based Model<br>
+        - Reinforcement Learning (RL) Based Model<br><br>
+        Overall Performance:<br>
+        - RNN Model: since going live in June, the model has achieved an overall portfolio increase of ~15%, consistently generating profitable weekly trades.<br>
+        - SGD and RL Models: still under evaluation and provide additional insights for strategy refinement.
+      </p>
+      <ul>
+        <li><a href="https://colab.research.google.com/drive/1Q15vtjbcG_I_Vy9XsZuA4qYmTbe-_fZN?usp=sharing" target="_blank">Stock Market AI (Google Colab, outdated version)</a></li>
+      </ul>
+      <p class="note">This Colab version is outdated and provided for reference. The current models have been significantly improved.</p>
+    </div>
   </div>
 
   <div id="data-science-projects" class="projects">
     <h3>Data Science Projects</h3>
+    <div class="tags"><span>Python</span><span>Flask</span><span>NLP</span><span>AWS EC2</span><span>Gunicorn</span><span>Nginx</span></div>
     <ul>
       <li>
         <a href="https://github.com/DanielGregory/RestaurantRecommender" target="_blank">Restaurant Recommender</a>
@@ -296,7 +404,7 @@
   <div id="about" class="about">
     <h3>About</h3>
     <p>
-      I'm Daniel Gregory, a Data &amp; Analytics Engineer with experience in machine learning, full-stack development, and cloud infrastructure. Currently building ML-driven analytics tools at PURE Insurance with C-suite visibility. Open to connecting via GitHub or email.<br><br>
+      I'm Daniel Gregory, a Data &amp; Analytics Engineer with experience in machine learning, full-stack development, and cloud infrastructure. Currently building ML-driven analytics tools at PURE Insurance with C-suite visibility. Outside work I build simulations, games, and web apps, most recently an ER simulator with a hospital planning tool. Open to connecting via GitHub or email.<br><br>
       <a href="https://github.com/DanielGregory" target="_blank">GitHub</a> &nbsp;|&nbsp;
       <a href="mailto:dannytgregory10@gmail.com">dannytgregory10@gmail.com</a>
     </p>
@@ -318,7 +426,7 @@
       backToTop.style.display = window.scrollY > 300 ? "block" : "none";
     });
 
-    var sections = document.querySelectorAll(".projects, .about, .section-divider");
+    var sections = document.querySelectorAll("#featured, #webapp-projects, #ml-projects, #data-science-projects, #academic, #about");
     var navLinks = document.querySelectorAll(".topnav ul li a");
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
