@@ -11,13 +11,12 @@
   <meta property="og:description" content="Data &amp; Analytics Engineer. An ER simulation game and hospital planner, multiplayer party games, ML trading models, and full-stack web apps.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
   <section class="header">
     <nav>
       <div class="topnav" id="topnavLinks">
-        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <button class="nav-toggle nav-close" type="button" aria-label="Close menu" onclick="hideMenu()"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
         <ul>
           <li><a href="#featured" onclick="hideMenu()">Featured</a></li>
           <li><a href="#webapp-projects" onclick="hideMenu()">Web Apps</a></li>
@@ -27,7 +26,7 @@
           <li><a href="#about" onclick="hideMenu()">About</a></li>
         </ul>
       </div>
-      <i class="fa fa-bars" onclick="showMenu()"></i>
+      <button class="nav-toggle nav-open" type="button" aria-label="Open menu" aria-controls="topnavLinks" onclick="showMenu()"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
     </nav>
     <div class="title">
       <h1>Daniel Gregory</h1>
@@ -57,8 +56,8 @@
     </ul>
     <div class="shots">
       <a href="images/er-sim-3d.jpg" target="_blank"><img src="images/er-sim-3d.jpg" alt="3D view of the simulated emergency department: waiting room, curtained cubicles, nurses' station and fast-track lane, with patients and staff marked by acuity and role" width="852" height="576" loading="lazy"></a>
-      <a href="images/er-sim-debrief.jpg" target="_blank"><img src="images/er-sim-debrief.jpg" alt="End-of-shift debrief: plain-language summary of what happened, waiting time by cause, and a timeline of the shift" width="1000" height="513" loading="lazy"></a>
-      <a href="images/er-sim-planner.jpg" target="_blank"><img src="images/er-sim-planner.jpg" alt="Planner forest plot: change in median door-to-provider time for five what-if scenarios, with 95% confidence intervals" width="1000" height="332" loading="lazy"></a>
+      <a href="images/er-sim-debrief.jpg" target="_blank"><picture><source media="(max-width: 700px)" srcset="images/er-sim-debrief-m.jpg" width="712" height="840"><img src="images/er-sim-debrief.jpg" alt="End-of-shift debrief: plain-language summary of what happened and where the waiting time went" width="1000" height="513" loading="lazy"></picture></a>
+      <a href="images/er-sim-planner.jpg" target="_blank"><picture><source media="(max-width: 700px)" srcset="images/er-sim-planner-m.jpg" width="712" height="685"><img src="images/er-sim-planner.jpg" alt="Planner results: what-if scenarios compared with the baseline, and the root causes of waiting" width="1000" height="332" loading="lazy"></picture></a>
     </div>
     <p>
       An emergency department simulator that is both a game and a planning tool. Players design the floor plan, staffing, and patient process of an ER, then watch a realistic simulation play out in 3D, with patients and staff walking between curtained cubicles, trauma rooms, triage booths, and a fast-track lane.
@@ -421,10 +420,10 @@
   <script>
     var topnavLinks = document.getElementById("topnavLinks");
     function showMenu() {
-      topnavLinks.style.left = "0";
+      topnavLinks.classList.add("open");
     }
     function hideMenu() {
-      topnavLinks.style.left = "-250px";
+      topnavLinks.classList.remove("open");
     }
 
     var backToTop = document.getElementById("backToTop");

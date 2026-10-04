@@ -301,10 +301,22 @@ p {
   transform: translateY(-2px);
 }
 
-/* ── NAV HAMBURGER ICON ── */
+/* ── NAV TOGGLE BUTTONS ── */
 
-nav .fa {
+.nav-toggle {
   display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  line-height: 0;
+}
+
+.shots picture,
+.shots img {
+  display: block;
+  width: 100%;
 }
 
 /* ── MOBILE ── */
@@ -321,8 +333,21 @@ nav .fa {
 
   .projects,
   .about {
-    width: 92%;
-    padding: 24px 22px;
+    width: auto;
+    margin: 16px 12px;
+    padding: 22px 18px;
+  }
+
+  .about {
+    margin-bottom: 32px;
+  }
+
+  .section-divider {
+    padding: 36px 20px;
+  }
+
+  .section-divider h2 {
+    font-size: 26px;
   }
 
   .topnav ul li {
@@ -330,27 +355,72 @@ nav .fa {
   }
 
   .topnav {
-    position: absolute;
+    position: fixed;
     background: #143434;
     height: 100vh;
-    width: 220px;
+    width: 240px;
     top: 0;
     left: -270px;
     text-align: left;
-    z-index: 2;
-    transition: left 0.4s ease;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 8px 0 0;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    box-shadow: 4px 0 18px rgba(0, 0, 0, 0.25);
   }
 
-  nav .fa {
+  .topnav.open {
+    left: 0;
+  }
+
+  .nav-toggle {
     display: block;
-    color: #fff;
-    margin: 20px 10px 10px 10px;
-    font-size: 22px;
-    cursor: pointer;
+  }
+
+  .nav-open {
+    margin: 10px 8px;
+  }
+
+  .nav-close {
+    align-self: flex-end;
+    margin-right: 6px;
   }
 
   .topnav ul {
-    padding: 25px;
+    padding: 4px 25px 25px;
+  }
+
+  .topnav ul li a {
+    display: block;
+    padding: 4px 0;
+  }
+
+  .title {
+    padding: 10px 16px 48px;
+  }
+
+  .title .hero-tagline {
+    font-size: 16px;
+  }
+
+  .hero-links a {
+    padding: 8px 18px;
+  }
+
+  .projects h3,
+  .about h3 {
+    font-size: 22px;
+  }
+
+  .entry h4 {
+    font-size: 19px;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
   }
 }
 
