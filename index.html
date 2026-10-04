@@ -37,6 +37,7 @@
         <a href="#featured">See featured work</a>
         <a href="https://github.com/DanielGregory" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/daniel-gregory1" target="_blank">LinkedIn</a>
+        <a href="Daniel_Gregory_Resume.pdf" target="_blank">Résumé</a>
         <a href="mailto:dannytgregory10@gmail.com">Email</a>
       </div>
     </div>
@@ -187,8 +188,8 @@
   <div id="ml-projects" class="projects">
     <h3>Machine Learning Projects</h3>
     <div class="entry">
-      <h4>AI-Driven Swing Trading Models</h4>
-      <div class="tags"><span>Python</span><span>RNN</span><span>scikit-learn</span><span>Reinforcement learning</span></div>
+      <h4>AI-Driven Trading System</h4>
+      <div class="tags"><span>Python</span><span>pandas</span><span>TensorFlow</span><span>scikit-learn</span><span>GRU</span><span>Reinforcement learning (PPO)</span></div>
       <ul>
         <li><a href="https://github.com/DanielGregory/Stock-Market-AI" target="_blank">GitHub</a></li>
         <li class="files">Results:
@@ -198,13 +199,13 @@
         </li>
       </ul>
       <p>
-        Machine learning models that predict 1-week price movements for individual stocks. The RNN-based model is the primary model in use and has consistently outperformed the broader market.<br><br>
-        Current Models:<br>
-        - SGDClassifier Based Model<br>
-        - Recurrent Neural Network (RNN) Based Model<br>
-        - Reinforcement Learning (RL) Based Model<br><br>
+        A personal trading system (December 2024 to present) that predicts 1-week price movements for individual stocks and manages a portfolio automatically.<br><br>
+        How it works:<br>
+        - A weekly pipeline retrains on up to 100 stocks, combining a GRU sequence model that predicts next-week direction, an SGD classifier that validates that signal, and a PPO reinforcement learning agent rewarded for risk-adjusted returns over 200 days of backtest.<br>
+        - Bullish candidates are ranked by a composite relative-strength score (cross-sectional percentiles of 20-, 60-, and 90-day returns), and capital is allocated across the top 5, capped at 25% per position.<br>
+        - Held positions are monitored daily: any that flip bearish are exited automatically and replaced with the next-ranked candidate.<br><br>
         Overall Performance:<br>
-        - RNN Model: since going live in June, the model has achieved an overall portfolio increase of ~15%, consistently generating profitable weekly trades.<br>
+        - RNN/GRU model: since going live in June, the model has achieved an overall portfolio increase of ~15%, consistently generating profitable weekly trades.<br>
         - SGD and RL Models: still under evaluation and provide additional insights for strategy refinement.
       </p>
       <ul>
@@ -256,6 +257,7 @@
       - Derives and evaluates an exact analytical solution to verify accuracy.<br>
       - Measures maximum-norm error and computes convergence rates across successive refinements.<br>
       - Plots numerical vs. exact solutions to visualize boundary-layer resolution.<br><br>
+      Result: the Shishkin-mesh solver roughly halved the max-norm error under mesh refinement. Done as a Numerical Analysis Research Assistant at the University of Kentucky (June 2023 to August 2024).<br><br>
       This project highlights the intersection of applied mathematics, numerical analysis, and scientific computing.
     </p>
   </div>
@@ -406,8 +408,10 @@
     <h3>About</h3>
     <p>
       I'm Daniel Gregory, a Data &amp; Analytics Engineer with experience in machine learning, full-stack development, and cloud infrastructure. Currently building ML-driven analytics tools at PURE Insurance with C-suite visibility. Outside work I build simulations, games, and web apps, most recently an ER simulator with a hospital planning tool. Open to connecting via LinkedIn, GitHub, or email.<br><br>
+      <strong>Education:</strong> Master of Computer Science, University of Illinois Urbana-Champaign (2025) &middot; B.S. Mathematics, minors in Computer Science and Psychology, University of Kentucky (2024, cum laude)<br><br>
       <a href="https://github.com/DanielGregory" target="_blank">GitHub</a> &nbsp;|&nbsp;
       <a href="https://www.linkedin.com/in/daniel-gregory1" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
+      <a href="Daniel_Gregory_Resume.pdf" target="_blank">Résumé (PDF)</a> &nbsp;|&nbsp;
       <a href="mailto:dannytgregory10@gmail.com">dannytgregory10@gmail.com</a>
     </p>
   </div>
