@@ -52,7 +52,7 @@
     <h3>ER Simulation Game &amp; Hospital Planner</h3>
     <div class="tags"><span>TypeScript</span><span>React</span><span>three.js</span><span>Discrete-event simulation</span><span>Python</span><span>Vitest</span><span>Playwright</span></div>
     <ul>
-      <li><a href="https://hospital-research-game-topaz.vercel.app" target="_blank">Play It (Live Demo)</a></li>
+      <li><a href="https://hospital-research-game-topaz.vercel.app" target="_blank">Play It (Live Demo)</a> <a href="https://github.com/DanielGregory/Hospital_research" target="_blank">Source on GitHub</a></li>
     </ul>
     <div class="shots">
       <a href="images/er-sim-3d.jpg" target="_blank"><img src="images/er-sim-3d.jpg" alt="3D view of the simulated emergency department: waiting room, curtained cubicles, nurses' station and fast-track lane, with patients and staff marked by acuity and role" width="852" height="576" loading="lazy"></a>
@@ -69,7 +69,7 @@
       <li><strong>The game:</strong> 8 story levels (Flu Season, Boarding Crisis, Mass Casualty, The New Build...), a career mode, a daily challenge, a sandbox with every system toggleable, and a "build your own hospital" mode where you draw rooms directly onto the 3D floor.</li>
       <li><strong>Research tooling:</strong> a headless command-line runner, baseline policies, a simulated-annealing search for the best-found setup, and a Python Gym-style wrapper for reinforcement learning.</li>
     </ul>
-    <p class="note">About 21,000 lines of TypeScript with 31 test files, plus end-to-end browser tests. Source code is private; available on request.</p>
+    <p class="note">About 21,000 lines of TypeScript with 31 test files (280 tests), plus end-to-end browser tests.</p>
   </div>
 
   <div id="party-games" class="projects featured">
@@ -116,7 +116,7 @@
       <h4>Financial Advisor</h4>
       <div class="tags"><span>TypeScript</span><span>Next.js</span><span>React</span><span>Chart.js</span></div>
       <ul>
-        <li><a href="https://financial-advisor-gules.vercel.app/investments" target="_blank">Live Demo</a></li>
+        <li><a href="https://financial-advisor-gules.vercel.app/dashboard" target="_blank">Live Demo</a></li>
       </ul>
       <p>
         An all-in-one personal finance planner. A guided setup wizard feeds a dashboard of key metrics, and every page shows how a decision affects the others.<br>
@@ -190,7 +190,6 @@
       <h4>AI-Driven Trading System</h4>
       <div class="tags"><span>Python</span><span>pandas</span><span>TensorFlow</span><span>scikit-learn</span><span>GRU</span><span>Reinforcement learning (PPO)</span></div>
       <ul>
-        <li><a href="https://github.com/DanielGregory/Stock-Market-AI" target="_blank">GitHub</a></li>
         <li class="files">Results:
           <a href="https://github.com/DanielGregory/Excel/raw/main/Model_50_3-27-25_para.xlsx">SGD (.xlsx)</a>
           <a href="https://github.com/DanielGregory/Excel/raw/main/S&amp;P500_RNN_3-27-25_500.xlsx">RNN (.xlsx)</a>
@@ -203,9 +202,9 @@
         - A weekly pipeline retrains on up to 100 stocks, combining a GRU sequence model that predicts next-week direction, an SGD classifier that validates that signal, and a PPO reinforcement learning agent rewarded for risk-adjusted returns over 200 days of backtest.<br>
         - Bullish candidates are ranked by a composite relative-strength score (cross-sectional percentiles of 20-, 60-, and 90-day returns), and capital is allocated across the top 5, capped at 25% per position.<br>
         - Held positions are monitored daily: any that flip bearish are exited automatically and replaced with the next-ranked candidate.<br><br>
-        Overall Performance:<br>
-        - RNN/GRU model: since going live in June 2025, the model has achieved an overall portfolio increase of ~15%, consistently generating profitable weekly trades.<br>
-        - SGD and RL Models: still under evaluation and provide additional insights for strategy refinement.
+        Live tracking:<br>
+        - Since August 2026 the full pipeline has run a $100,000 paper portfolio, fully automated: GitHub Actions retrain the models every Sunday and check positions after every market close.<br>
+        - Every pick, open position, closed trade and the running return against the S&amp;P 500 are published on a live results dashboard, so the results can be checked rather than taken on trust.
       </p>
       <ul>
         <li><a href="https://colab.research.google.com/drive/1Q15vtjbcG_I_Vy9XsZuA4qYmTbe-_fZN?usp=sharing" target="_blank">Stock Market AI (Google Colab, outdated version)</a></li>
