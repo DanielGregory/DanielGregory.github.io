@@ -52,7 +52,7 @@
     <h3>ER Simulation Game &amp; Hospital Planner</h3>
     <div class="tags"><span>TypeScript</span><span>React</span><span>three.js</span><span>Discrete-event simulation</span><span>Python</span><span>Vitest</span><span>Playwright</span></div>
     <ul>
-      <li><a href="https://hospital-research-game-topaz.vercel.app" target="_blank">Play It (Live Demo)</a> <a href="https://github.com/DanielGregory/Hospital_research" target="_blank">Source on GitHub</a></li>
+      <li><a href="https://hospital-research-game-topaz.vercel.app" target="_blank">Play It (Live Demo)</a> <a href="https://hospital-research-game-topaz.vercel.app/?demo" target="_blank">One-Click Planner Demo</a> <a href="https://github.com/DanielGregory/Hospital_research" target="_blank">Source on GitHub</a></li>
     </ul>
     <div class="shots">
       <a href="images/er-sim-3d.jpg" target="_blank"><img src="images/er-sim-3d.jpg" alt="3D view of the simulated emergency department: waiting room, curtained cubicles, nurses' station and fast-track lane, with patients and staff marked by acuity and role" width="852" height="576" loading="lazy"></a>
@@ -65,12 +65,12 @@
     <ul class="bullets">
       <li><strong>Simulation engine:</strong> a pure TypeScript discrete-event engine (arrivals, triage errors, deterioration, patients leaving unseen, misdiagnoses and 72-hour bounce-backs, inpatient boarding, lab and imaging queues, nurse ratios, staff fatigue). Fully deterministic: the same seed gives byte-identical results.</li>
       <li><strong>Validated against queueing theory:</strong> automated tests check the sim against the Erlang C formula and Little's Law, plus determinism and monotonicity checks.</li>
-      <li><strong>Real data:</strong> an open-data pipeline fits the model to MIMIC-IV-ED emergency department records in one command; the first fit, on the public MIMIC-IV-ED demo, runs as a pipeline check ahead of the full credentialed dataset.</li>
+      <li><strong>Calibrated to US national data:</strong> arrivals, ambulance share, admitting unit, test ordering and ward stays come from the CDC's national ED survey (NHAMCS 2021&ndash;2022, about 148 million visits a year). The example department matches 11 of 12 national checks, including the median wait to see a provider (16 vs 16 minutes). Hospitals can also start from any of 4,130 US EDs' published CMS figures.</li>
       <li><strong>Hospital planner:</strong> compares a baseline department with what-if changes on the same random days, reporting each KPI with 95% confidence intervals, a forest plot, a root-cause "bottleneck finder", and a printable report. It can calibrate itself from a hospital's visit records (CSV).</li>
       <li><strong>The game:</strong> 8 story levels (Flu Season, Boarding Crisis, Mass Casualty, The New Build...), a career mode, a daily challenge, a sandbox with every system toggleable, and a "build your own hospital" mode where you draw rooms directly onto the 3D floor.</li>
       <li><strong>Research tooling:</strong> a headless command-line runner, baseline policies, a simulated-annealing search for the best-found setup, and a Python Gym-style wrapper for reinforcement learning.</li>
     </ul>
-    <p class="note">About 21,000 lines of TypeScript with 33 test files (287 tests), plus end-to-end browser tests.</p>
+    <p class="note">About 23,000 lines of TypeScript with 36 test files (301 tests) and end-to-end browser tests, run automatically on every change.</p>
   </div>
 
   <div id="party-games" class="projects featured">
